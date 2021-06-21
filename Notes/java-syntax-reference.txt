@@ -1,0 +1,334 @@
+
+----------------------------------------------------
+1. java project
+---------------------------------------------------
+
+    proj
+     |
+     | 
+     |
+     |---- p1 ( .java / .class )
+     | 
+     |---- p2
+       |
+       |---- p2.1
+
+
+
+----------------------------------------------------
+2. java file
+---------------------------------------------------
+
+Public-Type.java
+-----------------------------------------
+| // package declaration (1)
+|
+| // import statement(s) ( many )
+|
+| // Public-Type (class|interface|enum|annotation) declaration ( 1 )  ( Must )
+|
+| // default (package-scope) Types ( many ) 
+|-----------------------------------------
+
+
+----------------------------------------------------
+3. Package
+---------------------------------------------------
+
+ why we need packages?
+
+    => to avoid typpe-name collisions
+    => to organize files based on features
+
+
+syntax:
+
+    package package-name;
+
+
+recommanded package name :
+-------------------------
+
+    Employee.java
+
+        -> emp
+
+            -> EM
+
+                -> revature
+
+                    -> com
+
+package com.revature.em.emp;
+
+public class Employee{
+}
+
+
+----------------------------------------------------
+4. import
+---------------------------------------------------
+
+
+proj
+|
+|-- p1  ( A.java , B.java )
+|
+|
+|-- p2  ( C.java , D.java )
+| |
+| |---p21 ( E. java )
+|
+|--- p3 ( C.java )
+
+
+
+e.g
+
+
+package p1;
+
+import p2.C;
+import p2.D;
+
+// or
+
+import p2.*;
+import p2.p21.E;
+
+import p3.*;
+
+
+public class A{
+ 
+ B b;
+ p3.C c;
+ D d;
+ E e;
+
+}
+
+
+syntax:
+
+import package-name.TypeName;
+
+
+
+----------------------------------------------------
+Object Oriented concepts - overview
+---------------------------------------------------
+
+
+imp-note : java is object based language
+
+
+what is object ?
+
+    - info,data,properties,attributs ==> state
+    - function,method,work,oprn      ==> behavior
+    - addr,location,reference        ==> identity
+
+
+    obj ==> sbi
+
+
+    similar objects ( e.g students )
+
+        -> will have same state definiation  but diffrent values
+        -> will have same behav but produce diffrent result
+
+
+object blueprint / plan  ==> class
+
+
+class  ==> instance(s)  
+
+
+OO ( Object oriented / real-world ) concepts
+-----------------------------------------------
+
+Network ---> Mobile --> Person
+
+
+1-Front-End / Interface / Abstraction
+
+ why we need ?
+
+    => easy to use/learn by dependent
+    => for loose-coupling b/w dependent & dependency
+
+2-Back-End / Implementation / Encapsulation
+
+ why we need ?
+
+    => to hide complexity
+    => for security reason
+
+
+3. Inheritance
+
+    Employee ( generalized template )
+
+        HR
+        Trainer
+        QC
+
+
+   why we need ?
+
+    re-use common data/behavior from mode generalized template 
+    to specialized template   
+
+
+4. Polymorphism  ( many form )
+
+    
+    why we need ?
+
+    -> obj should produce diffrent result with diffrent inp / envi
+
+        OO principle : open for extenstion , closed for modification
+
+
+---------------------------------------------------------------------------
+
+
+    
+
+----------------------------------------------------
+5. Type ( interface, class, enum , annotation )
+---------------------------------------------------
+
+// 1. 
+
+interface Name [extends] AnotherInterface{
+  // constance state
+  Type var=[value/obj]
+  // behavior
+  ReturnType behavior([args]);
+}
+
+
+// 2. class
+
+_______  _________ class Name [extends] BaseClass 
+[public] [abstract]           [implements] Interface1,Interface2 {
+[      ] [final]
+         [strictfp]         // 1. state - variables
+                            // 2. constructor(s)
+                            // 3. behavior - function / methods
+                            // 4. Inner Types 
+                    }
+
+
+
+3. enum
+
+4. annotation
+
+
+
+
+----------------------------------------------------
+5. Variabls 
+---------------------------------------------------
+
+Type
+
+    - simple-types / primitives ==> values
+    - complex-types / user-defined / reference type  ( interface | class | enum | anotation )
+
+class Employee{
+    static String tnrName; // class | static var
+    int id; // obj | instance var
+    void m(){
+        int local;
+    }
+}
+
+
+________________    ____________ Type varName = [value / obj's reference ];
+[public]            [static]
+[protected]         [final]
+[private]           [volatile]
+[       ]           [transient]
+
+-local variable-
+----------------------------------    
+ -Nil-               [final]
+
+
+
+----------------------------------------------------
+6. constructor
+---------------------------------------------------
+
+
+in java , obj creation is 2-step process
+
+    step-1 : allocate memory from HEAP            ==> 'new'
+    step-2 : intilize memory with obj's data      ==> 'constructor'
+
+    syntax:
+
+
+    ___________ ClassName([args]) [throws] Exception {
+    [public]        // obj's intilization logic
+    [private]
+    [protected]
+    [       ] 
+                }
+
+
+
+----------------------------------------------------
+7. Method
+---------------------------------------------------
+
+
+class Employee{
+
+    // class method
+    static void teach(){
+
+    }
+
+    // obj | instance method
+    void listen(){
+        
+    }
+
+}
+
+ReturnType
+
+    -> void
+    -> primitive type
+    -> reference type
+
+__________________    _________________ ReturnType methodName([args]){
+[public]               [static]
+[protected]            [abstract]       // A,L,R and assignment operations
+[private]              [final]          // conditional statements
+[         ]            [synchronized]   // looping statements
+                       [strictfp]       // invoking other obj's behav
+                       [native]
+                                        return [result= value / obj's reference]
+
+                                    }
+
+
+--------------------------------------------------------------------------------------------
+
+
+Java / Javascript Naming Conventions
+
+1. keywords (40) ==> lower-case
+2. Type Names    ==> pascal i.e  A____B____D____
+3. Var/Method Names ==> camel-case i.e _____B____C___
+4. constant variables ==> upper-case
+
+
+--------------------------------------------------------------------------------------
+
