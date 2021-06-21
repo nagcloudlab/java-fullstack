@@ -37,7 +37,7 @@ Public-Type.java
 
  why we need packages?
 
-    => to avoid typpe-name collisions
+    => to avoid type-name collisions
     => to organize files based on features
 
 
@@ -47,7 +47,6 @@ syntax:
 
 
 recommanded package name :
--------------------------
 
     Employee.java
 
@@ -59,6 +58,7 @@ recommanded package name :
 
                     -> com
 
+E.g 
 package com.revature.em.emp;
 
 public class Employee{
@@ -80,11 +80,11 @@ proj
 | |---p21 ( E. java )
 |
 |--- p3 ( C.java )
+|
 
 
 
 e.g
-
 
 package p1;
 
@@ -115,12 +115,15 @@ import package-name.TypeName;
 
 
 
+
 ----------------------------------------------------
-Object Oriented concepts - overview
+Object Oriented concepts - high-level-overview
 ---------------------------------------------------
 
 
-imp-note : java is object based language
+imp-note : 
+
+    java is object based language
 
 
 what is object ?
@@ -139,19 +142,21 @@ what is object ?
         -> will have same behav but produce diffrent result
 
 
-object blueprint / plan  ==> class
+object's blueprint / plan  ==> class
 
 
 class  ==> instance(s)  
 
 
+
+
 OO ( Object oriented / real-world ) concepts
 -----------------------------------------------
 
-Network ---> Mobile --> Person
 
 
-1-Front-End / Interface / Abstraction
+1-Front-End / Interface / Abstraction:
+-------------------------------------
 
  why we need ?
 
@@ -159,6 +164,7 @@ Network ---> Mobile --> Person
     => for loose-coupling b/w dependent & dependency
 
 2-Back-End / Implementation / Encapsulation
+-------------------------------------------
 
  why we need ?
 
@@ -167,6 +173,7 @@ Network ---> Mobile --> Person
 
 
 3. Inheritance
+---------------
 
     Employee ( generalized template )
 
@@ -181,7 +188,8 @@ Network ---> Mobile --> Person
     to specialized template   
 
 
-4. Polymorphism  ( many form )
+4. Polymorphism  ( many forms )
+------------------------------
 
     
     why we need ?
@@ -191,10 +199,6 @@ Network ---> Mobile --> Person
         OO principle : open for extenstion , closed for modification
 
 
----------------------------------------------------------------------------
-
-
-    
 
 ----------------------------------------------------
 5. Type ( interface, class, enum , annotation )
