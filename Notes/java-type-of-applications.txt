@@ -1,0 +1,40 @@
+
+-----------------------------------------------------------------
+Java Tech
+-----------------------------------------------------------------
+
+1. Java SE
+
+    - stand-alone/single-system/desktop application
+
+2. Java EE
+
+    - web / enterprise application
+
+
+-----------------------------------------------------------------
+
+
+component(s) + containers ==> java-application
+
+
+component ==> appln logic
+container ==> infra logic to run component(s) on JRE
+
+
+
+Java SE
+
+    1. application            : JRE ( java runtime evironment )
+
+
+Java EE
+
+    1. servlet/JSP            : web-container e.g Tomcat/Jetty + JRE
+
+
+--------------------------------------------------------------------
+
+
+
+java com.example.App "arg1" "arg2" "arg3"
