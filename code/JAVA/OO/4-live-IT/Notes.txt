@@ -1,0 +1,15 @@
+
+
+
+
+LivingThing
+
+    Human
+    Animal
+    
+
+why we need inheritance?    
+    
+==> able to re-use common state & behav
+==> unify different objects as one family.
+    

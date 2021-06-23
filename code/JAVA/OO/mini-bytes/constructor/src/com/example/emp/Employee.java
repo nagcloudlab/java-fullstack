@@ -5,6 +5,10 @@ public class Employee {
 	private int id;
 	private String name;
 	private double salary;
+	
+//	public Employee() {
+//		this(0,"Nil",0);
+//	}
 
 	public Employee(int id) {
 //		if (id > 0)

@@ -6,6 +6,7 @@ public class App {
 
 	public static void main(String[] args) {
 
+//		Employee employee=new Employee();
 		Employee e1 = new Employee(123);
 		Employee e2 = new Employee(124, "Nag");
 		Employee e3 = new Employee(125, "Nag", 20000);
