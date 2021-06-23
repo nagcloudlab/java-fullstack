@@ -290,7 +290,6 @@ in java , obj creation is 2-step process
 7. Method
 ---------------------------------------------------
 
-
 class Employee{
 
     // class method
@@ -310,6 +309,10 @@ ReturnType
     -> void
     -> primitive type
     -> reference type
+
+
+
+
 
 __________________    _________________ ReturnType methodName([args]){
 [public]               [static]

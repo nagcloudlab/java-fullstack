@@ -1,0 +1,76 @@
+goal 
+
+	=> define data-structures & algorithms (i.e collection ) in java, to work with data
+
+
+---------------------------------------------
+Front-End / Interface / Abstraction
+---------------------------------------------
+
+Collection
+	
+	- add(data)
+	- clear()
+	- sort()
+
+	
+	List/Linear
+	
+		- add(index,data)
+		- get(index)
+		
+	Set/Non-Linear
+	
+		- findFirst()
+		- findLast()		
+		
+		
+		
+---------------------------------------------
+Partial Abstractions / Abstract Classes
+---------------------------------------------
+		
+		if required
+
+
+
+---------------------------------------------
+Back-End / Implementation / Encapsulation
+---------------------------------------------
+
+
+
+  - ArrayList
+  - LinkedList
+  - Vector
+  - Stack
+  - CopyOnWriteArrayList
+  
+  
+----------------------------------------------------------------------
+
+
+Java Module
+-------------------
+
+
+Top-Level    : interface
+
+Middle-Level : Abstract-classes ( if required ) 
+
+Bottom-Level : implementation / concrete classes
+
+
+----------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+  
+  
+	

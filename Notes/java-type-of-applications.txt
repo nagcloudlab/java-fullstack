@@ -1,4 +1,5 @@
 
+
 -----------------------------------------------------------------
 Java Tech
 -----------------------------------------------------------------
@@ -14,13 +15,11 @@ Java Tech
 
 -----------------------------------------------------------------
 
-
 component(s) + containers ==> java-application
 
 
 component ==> appln logic
 container ==> infra logic to run component(s) on JRE
-
 
 
 Java SE
@@ -36,5 +35,3 @@ Java EE
 --------------------------------------------------------------------
 
 
-
-java com.example.App "arg1" "arg2" "arg3"
