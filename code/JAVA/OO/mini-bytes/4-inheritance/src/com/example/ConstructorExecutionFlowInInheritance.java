@@ -8,7 +8,6 @@ class A extends Object {
 		this.v = arg1;
 		System.out.println("im A");
 	}
-
 }
 
 class B extends A {
@@ -25,12 +24,10 @@ class C extends B {
 	}
 }
 
-public class ConstructorExecutionFlow {
+public class ConstructorExecutionFlowInInheritance {
 
 	public static void main(String[] args) {
-
 		C c = new C(123);
-
 	}
 
 }
