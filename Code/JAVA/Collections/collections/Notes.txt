@@ -1,0 +1,51 @@
+
+
+
+data structures
+------------------
+
+
+  - organizing memory to do CRUDSS with data
+  
+  
+  
+   
+e.g
+
+	=> LinkedList
+   
+   		
+   		
+--------------------------------------------------------------
+
+
+collection F.W
+
+
+	==> readily available data-structures from java community.
+	
+	What Is a Collections Framework?  java.util.*
+	
+		Interfaces
+		Implementations 
+		Agorithms
+	
+	
+	Benefits of the Java Collections Framework:
+		
+		=> Reduces programming effort
+		=> Increases program speed and quality
+		=> Allows interoperability among unrelated APIs
+		=> Reduces effort to learn and to use new APIs
+		=> Reduces effort to design new APIs
+		=> Fosters software reuse
+	
+
+--------------------------------------------------------------
+
+	
+	
+	
+	
+	
+	   		
