@@ -1,6 +1,6 @@
 package example.model;
 
-public class Product {
+public class Product extends Object /*implements Comparable<Product>*/ {
 
 	private int id;
 	private String name;
@@ -37,11 +37,16 @@ public class Product {
 		this.price = price;
 	}
 
-//	@Override
-//	public String toString() {
-//		return "Product [id=" + id + ", name=" + name + ", price=" + price + "]";
-//	}
-	
-	
+	@Override
+	public String toString() {
+		return "Product [id=" + id + ", name=" + name + ", price=" + price + "]";
+	}
+
+	/*
+		@Override
+		public int compareTo(Product o) {
+			return this.id - o.id;
+		}
+	*/
 
 }

@@ -23,9 +23,32 @@ public class LinkedList<E> implements Iterable<E> {
 	public Iterator<E> iterator() {
 
 		// Local-Inner-class
-		class Impln implements Iterator<E> {
-			Node currentNode = head;
+//		class Impln implements Iterator<E> {
+//			Node currentNode = head;
+//
+//			@Override
+//			public boolean hasNext() {
+//				boolean b = false;
+//				if (currentNode != null) {
+//					b = true;
+//				}
+//				return b;
+//			}
+//
+//			@Override
+//			public E next() {
+//				E e = currentNode.getData();
+//				currentNode = currentNode.getNext();
+//				return e;
+//			}
+//
+//		}
+//
+//		return new Impln();
 
+		return new Iterator<E>() {
+			Node currentNode = head;
+			//
 			@Override
 			public boolean hasNext() {
 				boolean b = false;
@@ -34,17 +57,14 @@ public class LinkedList<E> implements Iterable<E> {
 				}
 				return b;
 			}
-
 			@Override
 			public E next() {
 				E e = currentNode.getData();
 				currentNode = currentNode.getNext();
 				return e;
 			}
+		};
 
-		}
-
-		return new Impln();
 	}
 
 	// Inner-class
