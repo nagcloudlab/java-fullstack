@@ -19,17 +19,11 @@ public class LinkedList<E> implements Iterable<E> {
 		}
 	}
 
-	public E get(int index) {
-		// index=0
-		return head.getData();
-	}
-
 	@Override
 	public Iterator<E> iterator() {
 
 		// Local-Inner-class
 		class Impln implements Iterator<E> {
-
 			Node currentNode = head;
 
 			@Override
