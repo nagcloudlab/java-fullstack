@@ -43,9 +43,61 @@ collection F.W
 
 --------------------------------------------------------------
 
+collection:
+
+
+  List
+  
+	  -> index based
+	  -> ordered
+	  -> to hold duplicate data elements
+	  
+  Set
+  
+  	 -> to hold unique data elements
+  	 -> no index	   	
+
+  
+  Map
+  
+  	-> to keep data elements with user-identity ( key )
+  	
+  	
+ ------------------------------------------------------------------ 	
+	
+collection classes
+
+
+	List 
+	
+		- Vector ( dynamic-array ) -> thread-safe / synchronized ( slow )
+			- Stack - LIFO
+		- ArrayList ( dynamic-array )
+		- LinkedList ( DLL )  
 	
 	
-	
-	
+    Set
+    
+        - TreeSet ( tree )        -> ( natural order )
+        - HashSet ( hashtable )   -> ( un-ordered    )
+        - LinkedHashSet ( hashtable + DLL )          -> ( ordered )
+        
+    
+    Map
+    
+    	- TreeMap
+    	- HashMap
+    	- LinkedHashMap    
+        
+    Queue
+    
+    	- LinkedList     
+    	- PriorityQueue
+    	
+--------------------------------------------------------------------------------------------    
+        		
+        		
+        		
+        		
 	
 	   		

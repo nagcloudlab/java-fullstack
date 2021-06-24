@@ -1,6 +1,8 @@
 package example.util;
 
-public class LinkedList<E> {
+import java.util.Iterator;
+
+public class LinkedList<E> implements Iterable<E> {
 
 	private Node head;
 
@@ -22,6 +24,36 @@ public class LinkedList<E> {
 		return head.getData();
 	}
 
+	@Override
+	public Iterator<E> iterator() {
+
+		// Local-Inner-class
+		class Impln implements Iterator<E> {
+
+			Node currentNode = head;
+
+			@Override
+			public boolean hasNext() {
+				boolean b = false;
+				if (currentNode != null) {
+					b = true;
+				}
+				return b;
+			}
+
+			@Override
+			public E next() {
+				E e = currentNode.getData();
+				currentNode = currentNode.getNext();
+				return e;
+			}
+
+		}
+
+		return new Impln();
+	}
+
+	// Inner-class
 	private class Node {
 		private E data;
 		private Node next;
