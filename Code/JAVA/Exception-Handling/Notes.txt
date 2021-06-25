@@ -1,0 +1,58 @@
+
+
+
+
+
+Exception :
+
+
+	- unexpected program flow disturb
+	
+	
+reasons for exceptions
+
+
+	-> invalid input
+	-> index-out-of bound
+	-> io
+	-> sql
+	-> network
+	-> permission
+	-> custom condition failed...
+	
+
+what happen if exception occur?	
+
+   by default, on exception JRE kill process.
+   
+   
+soln :
+
+	=> handle & cont.. execeution
+	
+	
+
+how to handle exception ?
+
+
+	=> use Exception Handling solutions
+	
+	
+	
+	=> try,catch,finally
+	=> throws
+	
+	
+
+advantages:
+
+
+	Advantage 1: Separating Error-Handling Code from "Regular" Code
+	Advantage 2: Propagating Errors Up the Call Stack
+	Advantage 3: Grouping and Differentiating Error Types
+	
+
+
+	
+	   
+		
