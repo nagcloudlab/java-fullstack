@@ -6,7 +6,7 @@ import java.util.TreeSet;
 
 import example.model.Product;
 
-public class SetCollnEx1 {
+public class TreeSetCollnEx1 {
 
 	public static void main(String[] args) {
 
