@@ -1,0 +1,97 @@
+
+
+
+---------------------------------------------------------------
+ IO sources
+ ---------------------------------------------------------------
+ 
+ 
+  => standard input ( e.g keyboard / output ( console / terminal )
+  => file  
+  => buffer
+  => n/w sockets
+  
+  
+ ---------------------------------------------------------------
+  Type of IO stream 
+ ---------------------------------------------------------------
+
+  => 8-bit / byte streams
+  => 16-bit / character streams
+  
+ 
+  
+  inp-source   ------->     --------> java-appln
+  
+  out-source   <------      <-------- java-appln
+  
+ 
+ ----------------------------------------------------------------
+ 
+ IO classes 
+ 
+ 	( java.io.* )
+ 	
+ 	
+ 	
+   byte-stream(s)
+	   
+	   	InputStream 
+	   	OutputStream
+   	
+   character-stream
+   
+   		Reader
+   		Writer
+   		
+ 
+ 
+ source: file
+ 
+ 	   8-bit	
+ 	   		
+       FileInputStream
+       FileOutputStream
+       
+       
+       16-bit
+       
+       FileReader
+       FileWriter
+       
+
+buffer
+
+	
+	  8-bit
+	  
+	  BufferedInputStream
+	  BufferedOutputStream
+	  
+	  
+	  16-bit
+	  
+	  BufferedReader
+	  BufferedWriter
+	  
+
+
+	InputStreamReader  ( 8-bit -> 16-bit )
+	ObjectOutputStream  ( java-obj -byte-stream )
+	ObjectInputStream   ( byte-stream - java-obj )
+	
+	
+		  	       
+       
+   		
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
