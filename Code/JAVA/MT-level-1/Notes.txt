@@ -1,0 +1,19 @@
+
+
+
+terms
+-----------
+
+
+ process
+
+ 	 => independent execution within operating  system
+ 	 
+ 	 
+ thread
+
+ 	 => independent execution  within process. 
+ 	 => light-weight process, means multiple within process can share same resources/memory
+ 	 
+
+ 	 
