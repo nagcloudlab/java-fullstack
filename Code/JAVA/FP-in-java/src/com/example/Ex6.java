@@ -10,8 +10,6 @@ public class Ex6 {
 	 * 
 	 *  by composing many re-usable functions, can build complex function.
 	 *  
-	 *  
-	 *  
 	 *   i.e HOP 
 	 */
 	
