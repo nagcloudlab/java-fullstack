@@ -69,7 +69,19 @@ Predicate var= (Product product) -> {
 		
 		
 		
-		
+-----------------------------------------------------------------------
+
+
+
+
+Functional Programming Principles
+
+
+	
+	    - A function can be stored in a variable or value
+        - The return value of a function can be a function
+        - A parameter of a function can be a function
+			
 		
 		
 		
