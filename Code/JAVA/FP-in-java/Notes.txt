@@ -1,0 +1,75 @@
+
+
+-----------------------------------------------------------
+
+
+
+==> primitives & objects  are first-class citizen
+ 
+==> function/method is not first-class citizen till JDK  1.7
+
+
+
+
+-----------------------------------------------------------
+
+
+	class EleProducts implements Predicate {
+		@Override
+		public boolean test(Product product) {
+			return product.getType().equals(ProductType.ELEC);
+		}
+	}
+
+	
+	
+	var=public boolean test(Product product) {
+			return product.getType().equals(ProductType.ELEC);
+		}
+		
+		|
+		|
+		|
+		V
+		
+	var= boolean test(Product product) {
+		return product.getType().equals(ProductType.ELEC);
+	}
+	
+        |
+		|
+		|
+		V
+		
+	var= test(Product product) {
+		return product.getType().equals(ProductType.ELEC);
+	}	
+	
+	
+	    |
+		|
+		|
+		V
+		
+	var= (Product product) {
+		return product.getType().equals(ProductType.ELEC);
+	}	
+	
+	
+	    |
+		|
+		|
+		V
+		
+	"below one function in java"
+		
+Predicate var= (Product product) -> {
+		return product.getType().equals(ProductType.ELEC);
+	}	
+		
+		
+		
+		
+		
+		
+		
