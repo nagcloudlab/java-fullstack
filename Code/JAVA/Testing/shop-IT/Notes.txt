@@ -1,0 +1,39 @@
+
+
+
+shop_IT
+-------------
+
+
+  1. PriceMatrix
+  	  - getPrice(item)
+  		
+  		
+  2. Billing 
+  	 - getTotalPrice(cart)		
+
+
+
+-----------------------------------------------------
+
+
+  Unit-Testing
+  
+  	==> Unit ==> function | object 
+  	
+ 
+ 
+ how to do unit Testing ? 	
+ 
+ 
+ 	-> Junit from Apache?
+ 	
+ 	
+ 	
+----------------------------------------------------- 		
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
