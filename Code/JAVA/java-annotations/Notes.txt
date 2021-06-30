@@ -1,0 +1,10 @@
+
+
+
+annotation ( from JDK 1.5 )
+-------------------------------
+
+
+
+  ==> a meta-data, 
+      which describe about our program to other ( program , framework, tool , compiler )
