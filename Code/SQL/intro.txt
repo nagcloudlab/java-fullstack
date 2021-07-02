@@ -1,0 +1,41 @@
+
+
+
+s/w
+
+
+    - application ==> process data in-memory
+
+        - Object
+
+    - datasource
+
+        - file
+        
+        limitations with flat-files
+
+            => data slection/manipulation is difficult
+            => data duplication
+            => difficult maintain data constraints
+
+       - sql data-sources  / relational database management systems ( rdbms )    
+
+            Table / Relation
+
+            - oracle
+            - db2 from IBM
+            - SQL server  
+
+            - MySQL
+            - PostgreSQL
+            - .........
+
+       - nosql data-sources
+
+            - document
+                    - MongoDB
+                    - Apache CouchDB
+            - key-value
+                    - redis       
+
+----------------------------------------------------------------             
