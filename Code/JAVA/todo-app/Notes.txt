@@ -1,0 +1,75 @@
+
+
+
+----------------------------------------------------------------
+ todo-app
+ ----------------------------------------------------------------
+ 
+ 	application
+ 	
+ 			=> console based java application
+ 			
+    datasource
+    
+    		=> SQL datasource e.g MySQL
+    		
+----------------------------------------------------------------    					
+
+
+
+todo
+
+	- id : int
+	- title : string
+	- completed : boolean
+	
+
+---------------------------------------------------------------- 	
+
+
+
+Application
+
+	-> object model
+	
+	
+SQL-database
+
+	-> relational model	
+	
+   
+   ==> ORM ( Object Relational Mapping )
+   
+   
+   
+how to do ?
+  
+  
+    ==> using JDBC api  ( java.sql.* )
+  
+   
+----------------------------------------------------------------
+
+
+how to use JDBC-api ?
+
+
+step-1 : register/install 'jdbc-driver' with jdbc-api
+
+step-2 : create db-connection with URL,username and Password
+
+step-3 : create jdbc-statements with SQL
+
+step-4 : excute jdbc-statements & process result-set
+
+step-5 : handle SQLException
+
+step-6 : Manage Transactions i.e commit | rollback
+
+step-7 : close connection
+
+-------------------------------------------------------------------	 	
+
+
+
+
