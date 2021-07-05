@@ -2,8 +2,9 @@ package com.example;
 
 import java.sql.SQLException;
 
+import com.example.entity.Todo;
+import com.example.entity.User;
 import com.example.repository.JdbcTodoRepository;
-import com.example.repository.TodoFilter;
 import com.example.repository.TodoRepository;
 
 public class TodoApp {
@@ -14,6 +15,9 @@ public class TodoApp {
 
 		// 1- add todo
 //		Todo todo = new Todo("item-1", false);
+//		User user = new User(); // we can select data from db
+//		user.setId(2);
+//		todo.setUser(user);
 //		todoRepository.save(todo);
 
 		// 2- Edit | update todo
@@ -31,9 +35,17 @@ public class TodoApp {
 		// 6- viewTodo ( ALL | Active | Completed )
 //		todoRepository.getTodos(TodoFilter.COMPLETED)
 //		.forEach(todo->System.out.println(todo));
+		
+		
+		todoRepository.getTodos("Indu")
+		.forEach(todo->System.out.println(todo));
 
 		// 7. count
 //		System.out.println(todoRepository.count());
+
+//		UserRepository userRepository=new JdbcUserRepository();
+//		User user=new User("Indu");
+//		userRepository.save(user);
 
 	}
 

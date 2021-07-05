@@ -3,6 +3,7 @@ package com.example.repository;
 import java.util.List;
 
 import com.example.entity.Todo;
+import com.example.entity.User;
 
 public interface TodoRepository {
 
@@ -17,7 +18,9 @@ public interface TodoRepository {
 	void clearCompleted();
 
 	List<Todo> getTodos(TodoFilter filter);
-	
+
+	List<Todo> getTodos(String userName);
+
 	int count();
 
 }

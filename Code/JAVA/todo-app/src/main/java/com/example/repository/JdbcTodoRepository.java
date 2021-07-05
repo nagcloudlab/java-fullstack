@@ -19,10 +19,11 @@ public class JdbcTodoRepository implements TodoRepository {
 		try {
 			con = ConnectionFactory.getConnection();
 			// step-3 : create jdbc-statements with SQL
-			String sql = "insert into todos (title,completed) values (?,?)";
+			String sql = "insert into todos (title,completed,user_id) values (?,?,?)";
 			PreparedStatement ps = con.prepareStatement(sql);
 			ps.setString(1, todo.getTitle());
 			ps.setBoolean(2, todo.isCompleted());
+			ps.setInt(3, todo.getUser().getId());
 			// step-4 : excute jdbc-statements & process result-set
 			int rowCount = ps.executeUpdate();
 			if (rowCount == 1) {
@@ -220,6 +221,47 @@ public class JdbcTodoRepository implements TodoRepository {
 			}
 		}
 		return 0;
+	}
+	
+	@Override
+	public List<Todo> getTodos(String userName) {
+		
+		Connection con = null;
+
+		List<Todo> todos = new ArrayList<Todo>();
+
+		try {
+			con = ConnectionFactory.getConnection();
+			// step-3 : create jdbc-statements with SQL
+
+			String sql="select * from todos t inner join users u on t.user_id=u.id where u.name='"+userName+"'";
+			
+			Statement stmt = con.createStatement();
+			ResultSet rs = stmt.executeQuery(sql);
+
+			while (rs.next()) {
+				Todo todo = new Todo();
+				todo.setId(rs.getInt(1));
+				todo.setTitle(rs.getString(2));
+				todo.setCompleted(rs.getBoolean(3));
+				todos.add(todo);
+			}
+
+			// step-7 : close connection
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				con.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+
+		return todos;
+
+	
+		
 	}
 
 }

@@ -6,6 +6,8 @@ public class Todo {
 	private String title;
 	private boolean completed;
 
+	private User user;
+
 	public Todo(String title, boolean completed) {
 		super();
 		this.title = title;
@@ -38,6 +40,14 @@ public class Todo {
 
 	public void setCompleted(boolean completed) {
 		this.completed = completed;
+	}
+
+	public User getUser() {
+		return user;
+	}
+
+	public void setUser(User user) {
+		this.user = user;
 	}
 
 	@Override
