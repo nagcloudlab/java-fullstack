@@ -15,6 +15,11 @@
     		
 ----------------------------------------------------------------    					
 
+user
+
+	- userId
+	- name
+	
 
 
 todo
@@ -22,7 +27,7 @@ todo
 	- id : int
 	- title : string
 	- completed : boolean
-	
+	- user_id    
 
 ---------------------------------------------------------------- 	
 
@@ -73,3 +78,45 @@ step-7 : close connection
 
 
 
+
+
+design patterns
+-------------------
+
+
+1. DAO ( Data Access Object ) / Repository  pattern
+	
+	
+		  		
+	   why we need this pattern ,
+	   
+	   => To isolate data accessing operation from regular code	 
+	   
+	   adv
+	   
+	   ==> able to re-use data access functionality in different parts of appln.  		
+
+	
+	
+	 	  e.g 
+	 	  
+	 	  -Todo
+	 	  		TodoDAO / TodoRepository
+	 	  -User
+	 	  		UserDAO / UserRepositor		
+	 
+
+
+
+2. Factory design 
+
+
+	why we need this pattern ,
+	
+	=> to centralize/isolate complex obj construction code.
+
+
+	e.g ConnectionFactory
+	
+	
+	

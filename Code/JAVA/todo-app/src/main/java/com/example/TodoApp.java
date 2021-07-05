@@ -1,47 +1,39 @@
 package com.example;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-import org.gjt.mm.mysql.Driver;
-
-import com.example.entity.Todo;
+import com.example.repository.JdbcTodoRepository;
+import com.example.repository.TodoFilter;
+import com.example.repository.TodoRepository;
 
 public class TodoApp {
 
 	public static void main(String[] args) throws SQLException {
 
-		Todo todo = new Todo("item-1", false);
+		TodoRepository todoRepository = new JdbcTodoRepository(); // a.k.a D.A.O
 
-		// step-1 : register 'jdbc-driver'
-		DriverManager.registerDriver(new Driver());
+		// 1- add todo
+//		Todo todo = new Todo("item-1", false);
+//		todoRepository.save(todo);
 
-		// step-2: create db-connection with URL,username and Password
-		String url = "jdbc:mysql://localhost:3306/todos_db";
-		String username = "root";
-		String password = "root1234";
+		// 2- Edit | update todo
+//		todoRepository.update(1, "item-one");
 
-		Connection con = DriverManager.getConnection(url, username, password);
+		// 3- complete todo ( toggle )
+//		todoRepository.update(3, true);
 
-		System.out.println("connected..");
+		// 4- delete todo
+//		todoRepository.delete(1);
 
-		// step-3 : create jdbc-statements with SQL
-		String sql = "insert into todos (title,completed) values (?,?)";
-		PreparedStatement ps = con.prepareStatement(sql);
+		// 5- clearCompleted
+//		todoRepository.clearCompleted();
 
-		ps.setString(1, todo.getTitle());
-		ps.setBoolean(2, todo.isCompleted());
+		// 6- viewTodo ( ALL | Active | Completed )
+//		todoRepository.getTodos(TodoFilter.COMPLETED)
+//		.forEach(todo->System.out.println(todo));
 
-		// step-4 : excute jdbc-statements & process result-set
-		int rowCount = ps.executeUpdate();
-		if (rowCount == 1) {
-			System.out.println("Todo saved.");
-		}
-
-		//step-7 : close connection
-		con.close();
+		// 7. count
+//		System.out.println(todoRepository.count());
 
 	}
 
