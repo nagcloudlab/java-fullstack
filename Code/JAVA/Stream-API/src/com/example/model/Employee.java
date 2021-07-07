@@ -73,6 +73,44 @@ public class Employee {
 	public void setAddress(Address address) {
 		this.address = address;
 	}
+	
+	
+	public static boolean isFemale(Employee e) {
+		return e.gender.equals(Gender.FEMALE);
+	}
+	
+	public static boolean isMale(Employee e) {
+		return e.gender.equals(Gender.MALE);
+	}
+	
+	
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((name == null) ? 0 : name.hashCode());
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Employee other = (Employee) obj;
+		if (name == null) {
+			if (other.name != null)
+				return false;
+		} else if (!name.equals(other.name))
+			return false;
+		return true;
+	}
+
+
 
 
 
@@ -86,7 +124,8 @@ public class Employee {
 			new Employee(7,"Chen", 3500,Gender.FEMALE),
 			new Employee(8,"Krish", 2200,Gender.FEMALE),
 			new Employee(9,"Louie", 800,Gender.MALE),
-			new Employee(10,"Nag", 800,Gender.MALE)
+			new Employee(10,"Nag", 800,Gender.MALE),
+			new Employee(11,"Nag", 00,Gender.MALE)
 		};
 	
 }
