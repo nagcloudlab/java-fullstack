@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>index</title>
+
+    <script src="https://kit.fontawesome.com/bff1038fa3.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="./bootstrap-4.4.1/dist/css/bootstrap.css">
+    <script src="./jquery/jquery-3.4.1.js"></script>
+    <script src="./bootstrap-4.4.1/dist/js/bootstrap.js"></script>
+
+</head>
+
+<body>
+
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-info fixed-top">
+
+        <a class="navbar-brand" href="#">eat-IT</a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+        </div>
+
+    </nav>
+
+    <hr />
+    <div class="container">
+        <i class="fa fa-shopping-cart" style="color: lightcoral;"></i>
+        <span class="badge badge-dark">2</span> item(s) in cart
+    </div>
+    <hr />
+
+    <div class="container">
+        <ul class="nav nav-pills">
+            <li class="nav-item">
+                <a class="nav-link" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="items.html">Items</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="cart-view.html">Cart</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="orders.html">Orders</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="login.html">Login</a>
+            </li>
+        </ul>
+    </div>
+
+    <hr />
+    <div class="container">
+        <div class="alert alert-warning alert-dismissible fade show">
+            stay in home for safety
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    </div>
+    <hr />
+    <div class="container">
+        <div class="list-group">
+            <div class="list-group-item">
+                <div class="row">
+                    <div class="col-12 col-sm-4 col-md-3">
+                        <img class="img-fluid" src="./images/veg.png" alt="veg logo" />
+                    </div>
+                    <div class="col-12 col-sm-8 col-md-9">
+
+                        <h5>Veg - <small>25-March-2020</small></h5>
+                        <h6>&#8377;100.00</h6>
+                        <button class="btn btn-dark btn-sm">buy</button>
+
+                        <ul class="nav nav-tabs" style="margin-top: 5px;">
+                            <li class="nav-item">
+                                <a class="nav-link" id="tab-1" onclick="changeTab(event)" href="#">Description</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="tab-2" onclick="changeTab(event)" href="#">Ingre..</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" id="tab-3" onclick="changeTab(event)" href="#">Reviews</a>
+                            </li>
+                        </ul>
+
+                        <div id="panel-1">Veg is yummy</div>
+                        <div id="panel-2">Not Yet</div>
+                        <div id="panel-3">
+                            <div class="alert alert-info">
+                                <span class="badge badge-danger">5</span> &mdash; <span>who1@mail.com</span>
+                                <hr />
+                                <p>sample-review-1</p>
+                            </div>
+                            <div class="alert alert-info">
+                                <span class="badge badge-danger">1</span> &mdash; <span>who2@mail.com</span>
+                                <hr />
+                                <p>sample-review-2</p>
+                            </div>
+
+                            <button class="btn btn-sm btn-info" data-toggle="collapse" data-target="#review-form" id="new-review-btn">
+                                <i class="fa fa-plus"></i>
+                            </button>
+
+                            <div class="row collapse" id="review-form">
+                                <div class="col-8">
+                                    <div class="card">
+                                        <div class="card-header">Review Form</div>
+                                        <div class="card-body">
+                                            <form>
+                                                <div class="form-group">
+                                                    <label>stars</label>
+                                                    <select class="form-control">
+                                                        <option>1</option>
+                                                        <option>2</option>
+                                                        <option>3</option>
+                                                        <option>4</option>
+                                                        <option>5</option>
+                                                    </select>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>author</label>
+                                                    <input type="email" class="form-control" />
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>body</label>
+                                                    <textarea class="form-control"></textarea>
+                                                </div>
+                                                <button class="btn btn-primary">submit</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,141 @@
+
+----------------------------------------------
+
+UI
+
+    - data/content + style
+    - HTML + CSS ( cascade style sheet )
+
+
+----------------------------------------------
+// 1. How to apply css ?
+----------------------------------------------
+
+
+how to apply style to HTML elements ?
+    
+    3 ways
+
+    way-1 : inline style
+    -----------------------
+
+    syntax  :
+
+    style ="style-property1:value;style-property2:value"
+
+    way-2 : internal style
+    -----------------------
+
+    syntax :
+
+    <head>
+        <style>
+        </style>
+    </head>
+
+
+    way-3 : external style  ( recommended )
+    ----------------------------------------
+
+    syntax:
+    --------
+     
+    <head>
+        <link href="style.css" rel="stylesheet"/>
+    </head>
+ 
+
+-------------------------------------------------------
+ 2. How to select HTML elements  = CSS selector
+-------------------------------------------------------
+
+=> by tag-name
+=> by tag-id
+=> by tag-class-name
+
+reference : https://www.w3schools.com/cssref/trysel.asp
+
+
+--------------------------------------------------------
+3 . CSS - Normal document Flow , Float & Positioning 
+--------------------------------------------------------
+
+    - Box model review
+    - Normal document flow
+    - Floating Elements
+    - Clearing floats
+    - Floating columns
+    - Text columns without float
+    - Relative position
+    - Absolute position
+    - Fixed position
+    - z-index & stacking order
+
+--------------------------------------------------------
+ 5- CSS - responsive web design ( rwd )
+--------------------------------------------------------
+
+
+Responsive web design is the practice of building 
+a website suitable to work on every device 
+and every screen size, 
+no matter how large or small, mobile or desktop.
+
+
+4 guide-lines / principles
+----------------------------
+
+#1 -  Flexible Layouts / grids
+    
+     - Responsive Web Design Formula
+
+        formula : target / context x 100 = result%
+                 (340/538)*100 = 63.197026% 
+
+#2 - Media Queries ( CSS3 )
+
+    - https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries
+
+
+#3 - Mobile First approach
+
+
+#4 Flexible Multi-Media-content ( images , video )
+
+
+
+
+--------------------------------------------------------------
+5- Flexbox   & Grid Layout
+--------------------------------------------------------------
+   
+
+https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+https://css-tricks.com/snippets/css/complete-guide-grid/
+
+
+
+---------------------------------------------------------------------------
+Limitations of css 
+---------------------------------------------------------------------------
+
+    => No variables to hold common data ( color , dimentions , ...)
+    => No Mixins
+    => No Nesting styled definition
+    => No Arith operators
+    => No re-usable functions
+
+
+soln :
+
+    => usisng css-preprocessor  ( e.g LESS, SASS , stylush)
+
+
+    Ref: https://tutorialzine.com/2015/07/learn-less-in-10-minutes-or-less
+    
+-----------------------------------------------------------------------------  
+
+
+
+
+

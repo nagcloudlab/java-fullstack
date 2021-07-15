@@ -1,0 +1,27 @@
+
+
+
+
+.box{
+    background-color: #DEF;
+    padding: 30px;
+    margin: 30px;
+    position: relative;
+}
+
+.box h2{
+    font-family: monospace;
+    position: absolute;
+    top: 200px;
+    left: 130px;
+}
+
+.alert{
+    background-color: khaki;
+    padding: 30px;
+    font-family: monospace;
+    position: sticky;
+    position: -webkit-sticky;
+    bottom: 0;
+}
+

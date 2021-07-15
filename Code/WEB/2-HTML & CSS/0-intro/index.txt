@@ -1,0 +1,7 @@
+
+MERN stack
+
+    - Mongodb
+    - Express.js
+    - React.js
+    - Node.js
