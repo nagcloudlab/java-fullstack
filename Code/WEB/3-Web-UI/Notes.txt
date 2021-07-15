@@ -1,0 +1,86 @@
+
+-----------------------------------------------
+
+static  UI = data + style
+dynamic UI = data + style + behavior
+
+-----------------------------------------------
+
+static  web UI  = HTML + CSS
+dynamic web UI  = HTML + CSS + Javascript
+
+-----------------------------------------------
+
+
+
+why we need .js programs with HTML-page(s) in browser-envi ?
+
+
+
+using browser provided 'web-apis', 
+.js programs can bring any dynamic-ui activity to web-page 
+
+
+web-apis ==> w3c standards to use web
+
+
+=>  DOM,Timer,XHR
+
+    web-apis are implented by browser vendors (chrome,firefox,IE/Edge..) natively,
+    abstracted as 'javascript' objects & functions
+
+
+Javascript + DOM api
+------------------------
+ => page manipulation
+
+    -> create,retreive,update,delete HTML elements
+    -> can change HTML-element's style ( css )
+    -> can change HTML-element's inner content 
+    -> can change HTML-element's attributes/properties
+    -> can validate all form-fields before submit to server-side-programs
+    -> can create rich/user-friendly UI components to HTML-page like calendar,autocomplete,..
+    
+
+Javascript + Timer Api
+------------------------
+=> can execute some actions on timeout or timeinterval
+
+      setTimeout(fn,1000)
+      let interval=setInterval(fn,1000)
+      clearInterval(interval) 
+
+=> 
+Javascript + XHR / Fetch
+------------------------
+
+client(browser)                    server
+
+              ------------------->
+              <-------------------
+
+
+2 types communication
+-------------------------
+
+ 1- pull/synchronous/blocking-IO
+
+    by default , browser always communicate with server sync
+
+ 2. push/asynchronous/non-blocking-IO
+         
+-------------------------------------------------------
+
+
+i.e
+
+HTML + CSS + ( javascript + browser-apis)  ===> dynamci web user interface  : Front-End
+
+javascript + Node.js apis                  ===> backend-application         : Backed-end 
+
+
+-------------------------------------------------------
+
+
+
+DOM  ( Document Object Model )

@@ -1,0 +1,17 @@
+
+
+body{
+    width: 700px;
+    margin-right: auto;
+    margin-left: auto;
+    font-family: monospace;
+    font-size: 20px;
+}
+
+
+
+.box{
+    margin: 30px;
+    padding: 20px;
+    background-color: #DEF;
+}
