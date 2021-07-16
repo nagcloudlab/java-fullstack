@@ -12,6 +12,11 @@ public class Todo {
 		this.completed = completed;
 	}
 
+	public Todo(String title) {
+		super();
+		this.title = title;
+	}
+
 	public Todo() {
 
 	}

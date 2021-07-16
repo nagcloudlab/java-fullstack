@@ -19,7 +19,7 @@ public class JdbcTodoRepository implements TodoRepository {
 		try {
 			con = ConnectionFactory.getConnection();
 			// step-3 : create jdbc-statements with SQL
-			String sql = "insert into todos (title,completed,user_id) values (?,?,?)";
+			String sql = "insert into todos (title,completed) values (?,?)";
 			PreparedStatement ps = con.prepareStatement(sql);
 			ps.setString(1, todo.getTitle());
 			ps.setBoolean(2, todo.isCompleted());
