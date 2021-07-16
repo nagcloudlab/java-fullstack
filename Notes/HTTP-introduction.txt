@@ -1,0 +1,18 @@
+
+
+
+
+HTTP  
+
+
+    methods ==> defines type of request to server
+
+
+
+     - GET  i.e read recourse from server
+     - HEAD i.e read meta-data ( size,last-modified) of resouce, not resource
+     - POST i.e to create new resource at server-side or to perform any controlling oprn like login,register
+     - PUT  i.e to create new resource if not exist else update existing resource
+     - PATCH i.e partial update in resouce
+     - DELETE i.e to delete existing resource
+     - OPTION i.e to know privileges on resource
