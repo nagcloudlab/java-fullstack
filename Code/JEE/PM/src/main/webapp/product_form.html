@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+
+<body class="container">
+
+    <hr />
+    <div>Product Management</div>
+    <hr />
+
+    <div class="row">
+        <div class="col-6">
+            <div class="card">
+                <div class="card-header">Add New product</div>
+                <div class="card-body">
+                    <form action="save_product" method="POST">
+                        <div class="form-group">
+                            <label>Name</label>
+                            <input class="form-control" name="name"/>
+                        </div>
+                        <div class="form-group">
+                            <label>Price</label>
+                            <input class="form-control" name="price"/>
+                        </div>
+                        <div class="form-group">
+                            <label>Type</label>
+                            <select class="form-control" name="type">
+                                <option>ELEC</option>
+                                <option>OTHER</option>
+                            </select>
+                        </div>
+                        <button class="btn btn-dark">Save</button>
+                    </form>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+
+
+
+
+
+
+
+java
+
+SQL
+
+HTML,CSS,Javascript
+
+JEE
+
+    ( servlet &  JSP )
+
+
+------------------------------------------------------
+
+
+Product Management
+
+    - CRUD ( Create Retreive Update Delete)
+
+------------------------------------------------------
+
+
+data / model / entity
+
+
+ Product
+
+
+ Layer(s)
+
+    repository  ===> persisting logic
+    service     ===> processing logic
+    web         ===> req/resp logic 
+    infra
+
+
+------------------------------------------------------
+
+
+data accessing java tech
+
+
+    - jdbc
+    - jpa
+    - spring-data-jpa
