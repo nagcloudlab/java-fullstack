@@ -1,0 +1,20 @@
+
+
+
+
+
+   JPA / Hibernate
+   -----------------
+   
+   
+   	- ORM framework
+   	
+   	
+   	
+   	
+   	
+   	topics:
+   	-----------
+   	
+   	
+   	=> annotations to ORM
