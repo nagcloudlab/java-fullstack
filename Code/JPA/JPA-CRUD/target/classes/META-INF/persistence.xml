@@ -5,7 +5,6 @@
 	<persistence-unit name="my-pu"
 		transaction-type="RESOURCE_LOCAL">
 		<provider>org.hibernate.ejb.HibernatePersistence</provider>
-		
 		<properties>
 			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5Dialect" />
 			<property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver" />
@@ -14,7 +13,7 @@
 			<property name="hibernate.connection.password" value="root1234" />	
 			
 			
-			<!-- <property name="hibernate.hbm2ddl.auto" value="create-drop" /> --> 
+			<!-- <property name="hibernate.hbm2ddl.auto" value="create-drop" /> -->
 			<property name="hibernate.show_sql" value="true" />
 			<property name="hibernate.format_sql" value="true" />
 			
