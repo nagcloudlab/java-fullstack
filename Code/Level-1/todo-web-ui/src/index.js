@@ -1,12 +1,25 @@
 // const TodoService = require("./TodoService");
 // or
-import TodoService from './TodoService'
-import 'bootstrap/dist/css/bootstrap.css';
+import TodoService from "./TodoService";
+import "bootstrap/dist/css/bootstrap.css";
 
 const service = new TodoService();
 service.addTodo("Title-1");
 service.addTodo("Title-2");
-service.addTodo("Title-3");
+
+//---------------------------------------
+// HTTP call
+//---------------------------------------
+
+// fetch("http://localhost:8080/todo-server-app/todos")
+//   .then((response) => response.json())
+//   .then((todos) => {
+//     service.todos = todos;
+
+//     // Intial render
+//     renderTodos(service.getTodos("ALL"));
+
+//   });
 
 //---------------------------------------
 // query DOM Elements
@@ -17,8 +30,6 @@ const todosBodyEle = document.getElementById("todos-body");
 const clearCompletedBtn = document.getElementById("clear-completed");
 const completeAllBtn = document.getElementById("complete-all");
 const footerEle = document.getElementById("footer");
-
-renderTodos(service.getTodos("ALL"));
 
 //---------------------------------------
 // bind Event Listsner(s)
@@ -83,3 +94,5 @@ function renderTodos(todos) {
 
   todosBodyEle.innerHTML = trElements.join(" ");
 }
+
+renderTodos(service.getTodos("ALL"));
