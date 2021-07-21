@@ -23,15 +23,25 @@ geBtn.addEventListener("click", (e) => {
 
 const top5TodosBtn = document.getElementById("top-5-todos");
 const todosListEle = document.getElementById("todos");
-
-const url = "https://jsonplaceholder.typicode.com/todos?_limit=200";
+const todoCountListEle = document.getElementById("todo-count-list");
+const todoCountInpEle = document.getElementById("todo-count-inp");
 
 top5TodosBtn.addEventListener("click", (e) => {
-  //   withXHRApi();
+  // withXHRApi();
   withFetchApi();
 });
 
-async function withFetchApi() {
+todoCountListEle.addEventListener("change", (e) => {
+  if (e.target.value) withFetchApi(e.target.value);
+});
+
+todoCountInpEle.addEventListener("blur", (e) => {
+  if (e.target.value) withFetchApi(e.target.value);
+});
+
+async function withFetchApi(limit = 5) {
+  const url = `https://jsonplaceholder.typicode.com/todos?_limit=${limit}`;
+
   //   const promise = fetch(url);
   //   promise
   //     .then((response) => response.json())
@@ -83,5 +93,7 @@ function renderTodos(todos) {
 
 const timeEle = document.getElementById("time");
 setInterval(() => {
-  timeEle.innerText = new Date().toLocaleTimeString('en-US',{timeZone:'Asia/Kolkata'});
+  timeEle.innerText = new Date().toLocaleTimeString("en-US", {
+    timeZone: "Asia/Kolkata",
+  });
 }, 1000);
