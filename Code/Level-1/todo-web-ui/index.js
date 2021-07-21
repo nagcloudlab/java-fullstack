@@ -4,7 +4,9 @@
 
 const newInpEle = document.getElementById("new-input");
 const todosBodyEle = document.getElementById("todos-body");
-
+const clearCompletedBtn = document.getElementById("clear-completed");
+const completeAllBtn = document.getElementById("complete-all");
+const footerEle = document.getElementById("footer");
 //---------------------------------------
 //Model
 //---------------------------------------
@@ -31,16 +33,27 @@ class TodoService {
   deleteTodo(id) {
     this.todos = this.todos.filter((todo) => todo.id !== id);
   }
+  clearCompleted() {
+    this.todos = this.todos.filter((todo) => !todo.completed);
+  }
   completeTodo(id) {
     this.todos = this.todos.map((todo) =>
       todo.id === id ? { ...todo, completed: !todo.completed } : todo
     );
-    console.log(this.todos);
+  }
+  completeAll() {
+    let areAllCompleted = this.todos.every((todo) => todo.completed);
+    this.todos = this.todos.map((todo) => {
+      todo.completed = !areAllCompleted;
+      return todo;
+    });
   }
   getTodos(filter = "ALL") {
-    if (filter === "ALL") {
-      return this.todos;
-    }
+    if (filter === "ALL") return this.todos;
+    if (filter === "ACTIVE")
+      return this.todos.filter((todo) => !todo.completed);
+    if (filter === "COMPLETED")
+      return this.todos.filter((todo) => todo.completed);
   }
 }
 
@@ -73,6 +86,23 @@ todosBodyEle.addEventListener("click", (e) => {
     service.deleteTodo(todoId);
   }
   renderTodos(service.getTodos("ALL"));
+});
+
+clearCompletedBtn.addEventListener("click", (e) => {
+  service.clearCompleted();
+  renderTodos(service.getTodos("ALL"));
+});
+
+completeAllBtn.addEventListener("click", (e) => {
+  service.completeAll();
+  renderTodos(service.getTodos("ALL"));
+});
+
+footerEle.addEventListener("click", (e) => {
+  let targetId = e.target.id;
+  if (targetId === "view-all") renderTodos(service.getTodos("ALL"));
+  if (targetId === "view-active") renderTodos(service.getTodos("ACTIVE"));
+  if (targetId === "view-completed") renderTodos(service.getTodos("COMPLETED"));
 });
 
 //----------------------------------------

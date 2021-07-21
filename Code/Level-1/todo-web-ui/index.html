@@ -20,24 +20,24 @@
         <div class="alert alert-dark">
             <div class="row">
                 <div class="offset-3 col-6">
-                    <input id="new-input" 
-                           placeholder="New Todo?" 
-                           class="form-control input-lg" />
+                    <input id="new-input" placeholder="New Todo?" class="form-control input-lg" />
                 </div>
             </div>
         </div>
 
+        <button id="complete-all">
+            Complete All
+        </button>
         <div class="card card-body">
             <table class="table">
                 <tbody id="todos-body">
-
                 </tbody>
-                <tfoot>
+                <tfoot id="footer">
                     <tr>
-                        <td><button>All</button></td>
-                        <td><button>Active</button></td>
-                        <td><button>Completed</button></td>
-                        <td><button>Clear Completed</button></td>
+                        <td><button id="view-all">All</button></td>
+                        <td><button id="view-active">Active</button></td>
+                        <td><button id="view-completed">Completed</button></td>
+                        <td><button id="clear-completed">Clear Completed</button></td>
                     </tr>
                 </tfoot>
             </table>
