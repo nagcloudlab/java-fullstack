@@ -1,13 +1,9 @@
-
-
-
 //---------------------------------------
 // DOM Elements
 //---------------------------------------
 
 const newInpEle = document.getElementById("new-input");
-const todosEle=document.getElementById('todos-list')
-
+const todosBodyEle = document.getElementById("todos-body");
 
 //---------------------------------------
 //Model
@@ -32,6 +28,9 @@ class TodoService {
     const todo = new Todo(title);
     this.todos = this.todos.concat(todo);
   }
+  deleteTodo(id) {
+    this.todos = this.todos.filter((todo) => todo.id !== id);
+  }
   getTodos(filter = "ALL") {
     if (filter === "ALL") {
       return this.todos;
@@ -40,12 +39,11 @@ class TodoService {
 }
 
 const service = new TodoService();
-service.addTodo("Title-1")
-service.addTodo("Title-2")
-service.addTodo("Title-3")
+service.addTodo("Title-1");
+service.addTodo("Title-2");
+service.addTodo("Title-3");
 
-
-renderTodos(service.getTodos('ALL'))
+renderTodos(service.getTodos("ALL"));
 
 //---------------------------------------
 // bind Event Listsner(s)
@@ -59,6 +57,13 @@ newInpEle.addEventListener("keyup", (e) => {
   renderTodos(service.getTodos("ALL"));
 });
 
+
+todosBodyEle.addEventListener("click", (e) => {
+  const todId = e.target.dataset["id"];
+  service.deleteTodo(Number.parseInt(todId));
+  renderTodos(service.getTodos("ALL"));
+});
+
 //----------------------------------------
 // render
 //----------------------------------------
@@ -67,13 +72,15 @@ function renderTodos(todos) {
   const trElements = todos.map((todo) => {
     const trEle = `
                 <tr>
-                    <td><input type="checkbox" ${todo.completed?'checked':''} /></td>
+                    <td><input type="checkbox" ${
+                      todo.completed ? "checked" : ""
+                    } /></td>
                     <td>${todo.title}</td>
-                    <td><button>delete</button></td>
+                    <td><button data-id=${todo.id}>delete</button></td>
                 </tr>
             `;
     return trEle;
   });
 
-  todosEle.innerHTML = trElements.join(" ");
+  todosBodyEle.innerHTML = trElements.join(" ");
 }
