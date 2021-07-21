@@ -11,4 +11,6 @@ class Todo {
   }
 }
 
-module.exports = Todo;
+// module.exports = Todo; // cjm
+// or
+export default Todo; // esm

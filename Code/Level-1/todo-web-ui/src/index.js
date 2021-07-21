@@ -1,4 +1,6 @@
-const TodoService = require("./TodoService");
+// const TodoService = require("./TodoService");
+// or
+import TodoService from './TodoService'
 
 const service = new TodoService();
 service.addTodo("Title-1");

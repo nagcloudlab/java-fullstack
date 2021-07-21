@@ -1,5 +1,6 @@
-
-const Todo=require('./Todo')
+// const Todo=require('./Todo')
+// or
+import Todo from "./Todo";
 
 class TodoService {
   todos = [];
@@ -34,4 +35,6 @@ class TodoService {
   }
 }
 
-module.exports = TodoService;
+// module.exports = TodoService;
+
+export default TodoService;
