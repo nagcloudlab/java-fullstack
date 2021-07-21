@@ -1,5 +1,12 @@
+const TodoService = require("./TodoService");
+
+const service = new TodoService();
+service.addTodo("Title-1");
+service.addTodo("Title-2");
+service.addTodo("Title-3");
+
 //---------------------------------------
-// DOM Elements
+// query DOM Elements
 //---------------------------------------
 
 const newInpEle = document.getElementById("new-input");
@@ -7,60 +14,6 @@ const todosBodyEle = document.getElementById("todos-body");
 const clearCompletedBtn = document.getElementById("clear-completed");
 const completeAllBtn = document.getElementById("complete-all");
 const footerEle = document.getElementById("footer");
-//---------------------------------------
-//Model
-//---------------------------------------
-
-class Todo {
-  static nextId = 0;
-  constructor(title) {
-    this.id = ++Todo.nextId;
-    this.title = title;
-    this.completed = false;
-  }
-}
-
-//---------------------------------------
-// Service
-//---------------------------------------
-
-class TodoService {
-  todos = [];
-  addTodo(title) {
-    const todo = new Todo(title);
-    this.todos = this.todos.concat(todo);
-  }
-  deleteTodo(id) {
-    this.todos = this.todos.filter((todo) => todo.id !== id);
-  }
-  clearCompleted() {
-    this.todos = this.todos.filter((todo) => !todo.completed);
-  }
-  completeTodo(id) {
-    this.todos = this.todos.map((todo) =>
-      todo.id === id ? { ...todo, completed: !todo.completed } : todo
-    );
-  }
-  completeAll() {
-    let areAllCompleted = this.todos.every((todo) => todo.completed);
-    this.todos = this.todos.map((todo) => {
-      todo.completed = !areAllCompleted;
-      return todo;
-    });
-  }
-  getTodos(filter = "ALL") {
-    if (filter === "ALL") return this.todos;
-    if (filter === "ACTIVE")
-      return this.todos.filter((todo) => !todo.completed);
-    if (filter === "COMPLETED")
-      return this.todos.filter((todo) => todo.completed);
-  }
-}
-
-const service = new TodoService();
-service.addTodo("Title-1");
-service.addTodo("Title-2");
-service.addTodo("Title-3");
 
 renderTodos(service.getTodos("ALL"));
 
