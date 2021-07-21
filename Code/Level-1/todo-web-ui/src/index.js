@@ -1,6 +1,7 @@
 // const TodoService = require("./TodoService");
 // or
 import TodoService from './TodoService'
+import 'bootstrap/dist/css/bootstrap.css';
 
 const service = new TodoService();
 service.addTodo("Title-1");
