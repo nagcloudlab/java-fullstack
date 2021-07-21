@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>todo-web-ui</title>
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <hr />
+        <div>todo web ui</div>
+        <hr />
+
+        <div class="alert alert-dark">
+            <div class="row">
+                <div class="offset-3 col-6">
+                    <input id="new-input" 
+                           placeholder="New Todo?" 
+                           class="form-control input-lg" />
+                </div>
+            </div>
+        </div>
+
+        <div class="card card-body">
+            <table class="table">
+                <tbody id="todos-list"></tbody>
+                <tfoot>
+                    <tr>
+                        <td><button>All</button></td>
+                        <td><button>Active</button></td>
+                        <td><button>Completed</button></td>
+                        <td><button>Clear Completed</button></td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+
+
+    <script src="./index.js"></script>
+
+</body>
+
+</html>
