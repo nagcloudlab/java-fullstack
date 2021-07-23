@@ -1,0 +1,95 @@
+
+
+
+
+Complexities of javascript programs with browser Apis?
+-----------------------------------------------------
+
+    => browser compatability issues ( https://caniuse.com/ )
+    => performance issues should manage manually. i.e keep Minimal DOM changes
+    => memory management should manage manually. i.e clean un-used/invisible DOM elements
+    => Model & View are tightly coupled
+    => Node re-usable code fragments
+    => too much code for simple use-cases
+    ..
+
+
+
+
+    legacy solution:  ( 10 to 15 yrs back)
+
+    => server-side page technologies
+
+        e.g Servlet/JSP, ASP.net, PHP, etc....
+
+
+    Limitations of server-side page technologies:
+
+        => on every request, 
+            server-side programs should re-construct a web-page with new-data.  
+
+        => on every response, same static resources ( css, images ) loaded to browser
+            leades to n/w b/w issue
+
+        => on every response , browser re-loads current page    
+
+
+    Modern solution ( last 5 yrs)       
+
+
+     => using client(browser) side page technologies      
+
+        how?
+
+        using Modern browsers and advanced javascript concepts
+
+        +
+
+        using third-party's javascript lib,Frameworks,tools
+
+
+----------------------------------------------------------------
+
+
+1. jQuery
+
+    => DOM & XHR utility lib
+
+
+
+MVC arch based lib & F.Ws
+--------------------------
+
+
+1. knockout.js
+2. Ember.js
+3. Backbone.js
+4. Ext.js from sencha ( commercial )
+5. dojo
+6. yui
+
+7. Angular.js
+
+
+Component based Arch
+----------------------------
+
+ 1. React.js from facebook : v17
+ 2. Angular  from google   : v9
+ 3. vue.js
+ 4. Ember.js
+
+
+ ------------------------------------------------------------
+
+ - HTML
+ - css
+ - javascript
+     - ( react | NG )  ==> ( javascript | typescript )
+ - browser apis
+
+ ------------------------------------------------------------
+
+ <>
+
+ </>
