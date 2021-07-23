@@ -27,7 +27,13 @@ core concepts
     2. directives
 
 
-        a. structural directives
+        a. structural 
+
+            *dirName
+
+        b. attribute/property 
+
+            [dirName]="expression"
 
 
         

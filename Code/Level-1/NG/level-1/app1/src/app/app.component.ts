@@ -20,14 +20,14 @@ export class AppComponent {
       canBuy: true,
       imagePath: 'assets/Laptop.png',
     },
-    // {
-    //   id: 2,
-    //   name: 'Mobile',
-    //   price: 29000,
-    //   description: 'New pro',
-    //   canBuy: true,
-    //   imagePath:'assets/Mobile.png',
-    // }
+    {
+      id: 2,
+      name: 'Mobile',
+      price: 29000,
+      description: 'New pro',
+      canBuy: true,
+      imagePath:'assets/Mobile.png',
+    }
   ]
 
   currentTab: number = 1
