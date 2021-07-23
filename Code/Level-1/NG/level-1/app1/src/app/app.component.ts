@@ -9,8 +9,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  title: string = "shop-IT"
-
+  title: string = "shop-IT-v1"
+ 
   items: Array<any> = [
     {
       id: 1,
@@ -30,11 +30,7 @@ export class AppComponent {
     }
   ]
 
-  currentTab: number = 1
 
-  changeTab(event: Event, tabIndex: number) {
-    this.currentTab = tabIndex
-  }
 
 
 }

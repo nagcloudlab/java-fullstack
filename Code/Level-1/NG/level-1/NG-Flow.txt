@@ -16,7 +16,6 @@ core concepts
 
                 <element prop1="static-value" [prop2]="expression"/>
 
-
         3. event
 
              in template,
@@ -26,12 +25,13 @@ core concepts
 
     2. directives
 
+        a. component
 
-        a. structural 
+        b. structural 
 
             *dirName
 
-        b. attribute/property 
+        c. attribute/property 
 
             [dirName]="expression"
 
