@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>todo-web-ui</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <hr />
+        <div>Todo web-ui</div>
+        <hr />
+
+        <button id="hide-btn" class="btn btn-danger">hide</button>
+        <hr />
+
+
+        <section id="todos-ui">
+            <div class="alert alert-dark">
+                <div class="row">
+                    <div class="offset-3 col-6">
+                        <input id="new-input" placeholder="New Todo?" class="form-control input-lg" />
+                    </div>
+                </div>
+            </div>
+
+            <button id="complete-all">
+                Complete All
+            </button>
+
+
+            <div class="card card-body">
+                <table class="table">
+                    <tbody id="todos-body">
+                    </tbody>
+                    <tfoot id="footer">
+                        <tr>
+                            <td><button id="view-all">All</button></td>
+                            <td><button id="view-active">Active</button></td>
+                            <td><button id="view-completed">Completed</button></td>
+                            <td><button id="clear-completed">Clear Completed</button></td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+
+        </section>
+
+    </div>
+
+</body>
+
+</html>
