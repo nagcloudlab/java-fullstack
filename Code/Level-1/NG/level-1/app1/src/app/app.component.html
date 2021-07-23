@@ -1,0 +1,21 @@
+<div class="container">
+
+    <hr />
+    <div>{{title}}</div>
+    <hr />
+
+    <div *ngFor="let item of items" class="list-group-item">
+        <div class="row">
+            <div class="col-3"></div>
+            <div class="col-9">
+                <div>{{item.name}}</div>
+                <div>{{item.price}}</div>
+                <div>{{item.description}}</div>
+                <button class="btn btn-dark">buy</button>
+            </div>
+        </div>
+    </div>
+
+
+
+</div>

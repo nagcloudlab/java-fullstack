@@ -1,0 +1,20 @@
+
+
+core concepts
+
+    1. data-binding
+
+        a. interpolation
+
+            syntax:
+
+                in template, {{expression}}
+        
+
+    2. directives
+
+
+        a. structural directives
+
+
+        
