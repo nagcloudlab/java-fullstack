@@ -6,12 +6,39 @@
 
     <div *ngFor="let item of items" class="list-group-item">
         <div class="row">
-            <div class="col-3"></div>
+            <div class="col-3">
+                <img class="img-fluid" [src]="item.imagePath" />
+            </div>
             <div class="col-9">
-                <div>{{item.name}}</div>
+                <div [innerText]="item.name"></div>
                 <div>{{item.price}}</div>
-                <div>{{item.description}}</div>
-                <button class="btn btn-dark">buy</button>
+                <button *ngIf="item.canBuy" class="btn btn-dark">buy</button>
+                <br />
+                <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                        <a (click)="changeTab($event,1)" 
+                           class="nav-link" 
+                           href="#">
+                           Description
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a (click)="changeTab($event,2)" 
+                           class="nav-link" 
+                           href="#">
+                           Specification
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a (click)="changeTab($event,3)"
+                           class="nav-link" 
+                           href="#">Reviews
+                        </a>
+                    </li>
+                </ul>
+                <div *ngIf="currentTab===1">{{item.description}}</div>
+                <div *ngIf="currentTab===2">Not Yet</div>
+                <div *ngIf="currentTab===3">None Yet</div>
             </div>
         </div>
     </div>

@@ -17,17 +17,24 @@ export class AppComponent {
       name: 'Laptop',
       price: 249000,
       description: 'New Mac pro',
-      canBuy: true
+      canBuy: true,
+      imagePath: 'assets/Laptop.png',
     },
-    {
-      id: 2,
-      name: 'Mobile',
-      price: 29000,
-      description: 'New pro',
-      canBuy: true
-    }
+    // {
+    //   id: 2,
+    //   name: 'Mobile',
+    //   price: 29000,
+    //   description: 'New pro',
+    //   canBuy: true,
+    //   imagePath:'assets/Mobile.png',
+    // }
   ]
 
+  currentTab: number = 1
+
+  changeTab(event: Event, tabIndex: number) {
+    this.currentTab = tabIndex
+  }
 
 
 }

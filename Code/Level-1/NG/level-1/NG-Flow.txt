@@ -9,6 +9,19 @@ core concepts
             syntax:
 
                 in template, {{expression}}
+
+        b. property 
+
+                in template,
+
+                <element prop1="static-value" [prop2]="expression"/>
+
+
+        3. event
+
+             in template,
+
+             <element (event-name)="handler($event)"/>   
         
 
     2. directives
