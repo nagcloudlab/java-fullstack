@@ -3,19 +3,19 @@
 NG core concepts
 ----------------
 
-1. data-binding i.e how to read/write new data on template
+A. Components  ==> UI fragments
 
+    1. data-binding i.e how to read/write new data on template
+        a. interpolation
+        b. property
+        c. event
+    2. directives  i.e re-usable functions UI
+        a. component
+        b. structural
+        c. attribute
+B. Pipes    ==> funcmtion trannform data to other-form
 
-    a. interpolation
-    b. property
-    c. event
+C. Services  ==> objects which hold data & data-changing logic for UI components
 
-
-2. directives  i.e re-usable functions UI
-
-
-    a. component
-    b. structural
-    c. attribute
 
 
