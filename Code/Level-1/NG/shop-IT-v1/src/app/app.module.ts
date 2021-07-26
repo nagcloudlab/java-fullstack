@@ -7,6 +7,7 @@ import { ItemComponent } from './item/item.component';
 import { ReviewComponent } from './review/review.component';
 import { CartBadge } from './cart-badge/cart-badge.component';
 import { PriceDiscountPipe } from './price-discount.pipe';
+import { HighlightDirective } from './highlight.directive';
 // import { ItemsService } from './items.service';
 
 @NgModule({
@@ -16,7 +17,8 @@ import { PriceDiscountPipe } from './price-discount.pipe';
     ItemComponent,
     ReviewComponent,
     CartBadge,
-    PriceDiscountPipe
+    PriceDiscountPipe,
+    HighlightDirective
   ],
   imports: [
     BrowserModule

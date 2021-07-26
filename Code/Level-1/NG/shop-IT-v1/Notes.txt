@@ -1,7 +1,8 @@
 
-
+--------------------------------------------------------------------
 NG core concepts
-----------------
+--------------------------------------------------------------------
+
 
 A. Components  ==> UI fragments
 
@@ -9,13 +10,32 @@ A. Components  ==> UI fragments
         a. interpolation
         b. property
         c. event
+
     2. directives  i.e re-usable functions UI
-        a. component
-        b. structural
-        c. attribute
-B. Pipes    ==> funcmtion trannform data to other-form
+        a. component , <app-xx>
+        b. structural, *dirName 
+        c. attribute,  [dirName]
+
+        
+
+B. Pipes    ==> funcntion tranform data to other-form
 
 C. Services  ==> objects which hold data & data-changing logic for UI components
 
 
+
+-  custom directive
+
+
+
+
+--------------------------------------------------------------------
+NG features
+--------------------------------------------------------------------
+
+- routing for SPA
+- http a.k.a AJAX calls
+- form handling
+
+--------------------------------------------------------------------
 

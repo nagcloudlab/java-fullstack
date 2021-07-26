@@ -1,4 +1,6 @@
-<div class="row">
+<div class="row" 
+     appHighlight
+     >
 
     <!-- 
     <pre>
@@ -11,7 +13,7 @@
     </div>
     <div class="col-9">
         <div>{{item.name|uppercase}} - <small>{{item.makeDate | date:'yyyy - MMM'}}</small></div>
-        <div>{{item.price | priceDiscount:item.discount | currency:item.currencyCode:true}}</div>
+        <div>{{item.price | priceDiscount:item.discount | currency:item.currencyCode:'symbol'}}</div>
         <button (click)="handleBuy($event)" class="btn btn-sm btn-dark">buy</button>
         <br />
         <ul class="nav nav-tabs">
