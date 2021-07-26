@@ -1,9 +1,10 @@
 import { Component, Input } from "@angular/core";
+import { CartService } from "../cart.service";
 
 
 @Component({
-    selector:'app-cart-badge',
-    template:`
+    selector: 'app-cart-badge',
+    template: `
     
     <hr />
     <span class="badge bg-dark">
@@ -14,9 +15,16 @@ import { Component, Input } from "@angular/core";
     
     `
 })
-export class CartBadge{
+export class CartBadge {
 
     @Input("value")
-    count=0;
+    count = 0;
+
+    constructor(private cartService: CartService) { }
+
+    // Attn: dont-use like this 
+    ngDoCheck() {
+        this.count = this.cartService.cart.length;
+    }
 
 }

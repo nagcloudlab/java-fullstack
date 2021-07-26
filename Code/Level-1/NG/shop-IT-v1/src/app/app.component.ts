@@ -1,46 +1,33 @@
 import { Component } from '@angular/core';
+import { ItemsService } from './items.service'
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
+  // providers: [ItemsService]
 })
 export class AppComponent {
 
   title = 'shop-IT-v1';
+  
+  items: Array<any> = []
 
-  cart: Array<any> = []
+  // itemsService: ItemsService = new ItemsService() // Never do
 
-  items: Array<any> = [
-    {
-      id: 1,
-      name: 'Laptop',
-      price: 1000.00,
-      discount:10,
-      currencyCode:'INR',
-      description: 'New Mac pro',
-      img_path: 'assets/Laptop.png',
-      makeDate:Date.now()
-    },
-    {
-      id: 2,
-      name: 'Mobile',
-      price: 500.00,
-      discount:30,
-      currencyCode:'INR',
-      description: 'New pro',
-      img_path: 'assets/Mobile.png',
-      makeDate:Date.now()
-    }
-  ]
+  // private itemsService: ItemsService;
+  // constructor(itemserService: ItemsService) {
+  //   this.itemsService = itemserService;
+  // }
 
-  addToCart(item: any) {
-    this.cart.push(item)
+  // or
+
+  // cdi
+  constructor(private itemsService:ItemsService){}
+
+  ngOnInit() {
+    this.items = this.itemsService.getItems();
   }
 
-  handleBuy(event: any) {
-    let item = event.item;
-    this.addToCart(item)
-  }
 
 }

@@ -1,4 +1,5 @@
-import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { CartService } from '../cart.service';
 
 @Component({
   selector: 'app-item',
@@ -10,16 +11,14 @@ export class ItemComponent {
   @Input("value")
   item: any = {};
 
-  @Output("buy")
-  buy = new EventEmitter()
-
-
   currentTab = 1; //  state
 
   reviews: Array<any> = [
     { stars: 5, body: 'sample-review-1', author: 'who1' },
     { stars: 1, body: 'sample-review-2', author: 'who2' }
   ]
+
+  constructor(private cartService: CartService) { }
 
   handleTabChange(event: Event, tabIdx: number) {
     this.currentTab = tabIdx
@@ -30,10 +29,7 @@ export class ItemComponent {
   }
 
   handleBuy(event: any) {
-    let e = {
-      item: this.item
-    }
-    this.buy.emit(e)
+    this.cartService.addToCart(this.item)
   }
 
 }

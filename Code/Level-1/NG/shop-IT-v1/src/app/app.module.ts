@@ -7,6 +7,7 @@ import { ItemComponent } from './item/item.component';
 import { ReviewComponent } from './review/review.component';
 import { CartBadge } from './cart-badge/cart-badge.component';
 import { PriceDiscountPipe } from './price-discount.pipe';
+// import { ItemsService } from './items.service';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,7 @@ import { PriceDiscountPipe } from './price-discount.pipe';
   imports: [
     BrowserModule
   ],
-  providers: [],
+  // providers: [ItemsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
