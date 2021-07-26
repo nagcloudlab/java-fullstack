@@ -6,7 +6,7 @@
     <div class="col-9">
         <div>{{item.name}}</div>
         <div>{{item.price}}</div>
-        <button class="btn btn-sm btn-dark">buy</button>
+        <button (click)="handleBuy($event)" class="btn btn-sm btn-dark">buy</button>
         <br />
         <ul class="nav nav-tabs">
             <li class="nav-item">

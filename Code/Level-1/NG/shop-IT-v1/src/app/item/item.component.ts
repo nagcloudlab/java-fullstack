@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-item',
@@ -9,6 +9,10 @@ export class ItemComponent {
 
   @Input("value")
   item: any = {};
+
+  @Output("buy")
+  buy = new EventEmitter()
+
 
   currentTab = 1; //  state
 
@@ -23,6 +27,13 @@ export class ItemComponent {
 
   isTabSelected(tabIdx: number): boolean {
     return this.currentTab === tabIdx;
+  }
+
+  handleBuy(event: any) {
+    let e = {
+      item: this.item
+    }
+    this.buy.emit(e)
   }
 
 }

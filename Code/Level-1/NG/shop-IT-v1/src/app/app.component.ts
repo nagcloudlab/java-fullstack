@@ -9,7 +9,9 @@ export class AppComponent {
 
   title = 'shop-IT-v1';
 
-  items = [
+  cart: Array<any> = []
+
+  items: Array<any> = [
     {
       id: 1,
       name: 'Laptop',
@@ -26,6 +28,13 @@ export class AppComponent {
     }
   ]
 
-  
+  addToCart(item: any) {
+    this.cart.push(item)
+  }
+
+  handleBuy(event: any) {
+    let item = event.item;
+    this.addToCart(item)
+  }
 
 }
