@@ -6,6 +6,7 @@ import { Navbar } from './navbar/navbar.component';
 import { ItemComponent } from './item/item.component';
 import { ReviewComponent } from './review/review.component';
 import { CartBadge } from './cart-badge/cart-badge.component';
+import { PriceDiscountPipe } from './price-discount.pipe';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { CartBadge } from './cart-badge/cart-badge.component';
     Navbar,
     ItemComponent,
     ReviewComponent,
-    CartBadge
+    CartBadge,
+    PriceDiscountPipe
   ],
   imports: [
     BrowserModule

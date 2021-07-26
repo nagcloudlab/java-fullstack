@@ -1,11 +1,17 @@
 <div class="row">
 
+    <!-- 
+    <pre>
+        {{item|json}}
+    </pre> 
+   -->
+
     <div class="col-3">
         <img [src]="item.img_path" class="img-fluid" />
     </div>
     <div class="col-9">
-        <div>{{item.name}}</div>
-        <div>{{item.price}}</div>
+        <div>{{item.name|uppercase}} - <small>{{item.makeDate | date:'yyyy - MMM'}}</small></div>
+        <div>{{item.price | priceDiscount:item.discount | currency:item.currencyCode:true}}</div>
         <button (click)="handleBuy($event)" class="btn btn-sm btn-dark">buy</button>
         <br />
         <ul class="nav nav-tabs">
@@ -25,7 +31,7 @@
                     href="#">Reviews</a>
             </li>
         </ul>
-        <div *ngIf="isTabSelected(1)">{{item.description}}</div>
+        <div *ngIf="isTabSelected(1)">{{item.description | slice:0:500}}</div>
         <div *ngIf="isTabSelected(2)">Not Yet</div>
         <div *ngIf="isTabSelected(3)">
             <div *ngFor="let review of reviews" class="alert alert-info">

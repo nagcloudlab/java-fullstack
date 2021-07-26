@@ -6,7 +6,7 @@
   <!-- cart-badge -->
   <app-cart-badge [value]="cart.length"></app-cart-badge>
 
-  <div class="list-group-item" *ngFor="let item of items;let idx=index;first as isFirst">
+  <div class="list-group-item" *ngFor="let item of items | slice:0:10; let idx=index;first as isFirst">
     <!-- Item -->
     <app-item [value]="item" (buy)="handleBuy($event)"></app-item>
   </div>
