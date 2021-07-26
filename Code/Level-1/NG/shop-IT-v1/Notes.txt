@@ -1,0 +1,21 @@
+
+
+NG core concepts
+----------------
+
+1. data-binding i.e how to read/write new data on template
+
+
+    a. interpolation
+    b. property
+    c. event
+
+
+2. directives  i.e re-usable functions UI
+
+
+    a. component
+    b. structural
+    c. attribute
+
+

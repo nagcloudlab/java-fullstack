@@ -1,0 +1,15 @@
+<div class="container">
+
+  <!-- Navbar -->
+  <app-navbar [title]="title"></app-navbar>
+
+
+  <div class="list-group-item" *ngFor="let item of items;let idx=index;first as isFirst">
+
+    <!-- Item -->
+    <app-item [value]="item"></app-item>
+
+  </div>
+
+
+</div>

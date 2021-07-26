@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
 
-
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -9,28 +7,25 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  title: string = "shop-IT-v1"
- 
-  items: Array<any> = [
+  title = 'shop-IT-v1';
+
+  items = [
     {
       id: 1,
       name: 'Laptop',
-      price: 249000,
+      price: 1000.00,
       description: 'New Mac pro',
-      canBuy: true,
-      imagePath: 'assets/Laptop.png',
+      img_path: 'assets/Laptop.png'
     },
     {
       id: 2,
       name: 'Mobile',
-      price: 29000,
+      price: 500.00,
       description: 'New pro',
-      canBuy: true,
-      imagePath:'assets/Mobile.png',
+      img_path: 'assets/Mobile.png'
     }
   ]
 
-
-
+  
 
 }

@@ -1,0 +1,10 @@
+<div>
+    <!-- <span class="badge bg-danger">{{review.stars}}</span> -->
+    <span *ngFor="let i of starsArr">
+        <i class="fa fa-star star"></i>
+    </span>
+    &mdash;
+    <span class="badge bg-dark">{{review.author}}</span>
+    <hr />
+    <div>{{review.body}}</div>
+</div>
