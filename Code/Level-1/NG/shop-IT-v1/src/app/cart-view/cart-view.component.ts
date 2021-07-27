@@ -14,4 +14,11 @@ export class CartViewComponent implements OnInit {
   ngOnInit(): void {
     this.cart = this.cartService.cart
   }
+
+  handleQty(item: any, qty: number) {
+    this.cartService.addToCart(item, qty)
+  }
+  handleDelCartLine(item: any) {
+    this.cartService.deleteCartLine(item)
+  }
 }

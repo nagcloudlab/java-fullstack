@@ -4,17 +4,50 @@
       <th>S-No</th>
       <th>Name</th>
       <th>Price</th>
+      <th></th>
       <th>Qty</th>
+      <th></th>
       <th>Total</th>
+      <th></th>
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let cartLine of cart; let idx = index">
+    <tr *ngFor="let cartLine of cart | keyvalue; let idx = index">
       <td>{{ idx + 1 }}</td>
-      <td>{{ cartLine.name }}</td>
-      <td>{{ cartLine.price }}</td>
-      <td>qty</td>
-      <td>total</td>
+      <td>{{ cartLine.value.item.name }}</td>
+      <td>
+        {{
+          cartLine.value.item.price | currency: cartLine.value.item.currencyCode
+        }}
+      </td>
+      <td>
+        <button (click)="handleQty(cartLine.value.item, 1)">
+          <i class="fa fa-plus"></i>
+        </button>
+      </td>
+      <td>{{ cartLine.value.qty }}</td>
+      <td>
+        <button
+          [disabled]="cartLine.value.qty === 1"
+          (click)="handleQty(cartLine.value.item, -1)"
+        >
+          <i class="fa fa-minus"></i>
+        </button>
+      </td>
+      <td>
+        {{
+          cartLine.value.item.price * cartLine.value.qty
+            | currency: cartLine.value.item.currencyCode
+        }}
+      </td>
+      <td>
+        <button
+          (click)="handleDelCartLine(cartLine.value.item)"
+          class="btn btn-danger"
+        >
+          delete
+        </button>
+      </td>
     </tr>
   </tbody>
 </table>
