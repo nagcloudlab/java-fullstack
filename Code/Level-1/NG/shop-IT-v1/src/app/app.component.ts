@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component } from '@angular/core'
 import { ItemsService } from './items.service'
 
 @Component({
@@ -8,10 +8,11 @@ import { ItemsService } from './items.service'
   // providers: [ItemsService]
 })
 export class AppComponent {
+  title = 'shop-IT-v1'
 
-  title = 'shop-IT-v1';
-  
   items: Array<any> = []
+
+  isCartOpen: boolean = false
 
   // itemsService: ItemsService = new ItemsService() // Never do
 
@@ -23,11 +24,13 @@ export class AppComponent {
   // or
 
   // cdi
-  constructor(private itemsService:ItemsService){}
+  constructor(private itemsService: ItemsService) {}
 
   ngOnInit() {
-    this.items = this.itemsService.getItems();
+    this.items = this.itemsService.getItems()
   }
 
-
+  toggleCart() {
+    this.isCartOpen = !this.isCartOpen
+  }
 }

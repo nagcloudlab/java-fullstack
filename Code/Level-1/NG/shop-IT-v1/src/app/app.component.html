@@ -1,15 +1,28 @@
 <div class="container">
-
   <!-- Navbar -->
   <app-navbar [title]="title"></app-navbar>
 
   <!-- cart-badge -->
   <app-cart-badge></app-cart-badge>
 
-  <div class="list-group-item" *ngFor="let item of items | slice:0:10; let idx=index;first as isFirst">
-    <!-- Item -->
-    <app-item [value]="item"></app-item>
-  </div>
+  <ul class="nav nav-pills">
+    <li class="nav-item">
+      <a class="nav-link" href="/">
+        Home
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/items">
+        Items
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/cart">
+        Cart
+      </a>
+    </li>
+  </ul>
+  <hr />
 
-
+  <router-outlet></router-outlet>
 </div>

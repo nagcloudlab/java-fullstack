@@ -14,7 +14,6 @@ export class CartService {
 
   addToCart(item: any) {
     this.cart.push(item)
-    console.log('CartService :: propagating cart-countinto stream')
     this.cartCountStream.next(this.cart.length)
   }
 }

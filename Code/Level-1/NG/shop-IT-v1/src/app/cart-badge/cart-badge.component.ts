@@ -20,7 +20,6 @@ export class CartBadge {
   ngOnInit() {
     this.cartService.cartCountStream.subscribe({
       next: (count) => {
-        console.log('CartBadge :: reacting to new-cart-count')
         this.count = count
       },
     })

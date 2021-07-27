@@ -1,0 +1,20 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th>S-No</th>
+      <th>Name</th>
+      <th>Price</th>
+      <th>Qty</th>
+      <th>Total</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let cartLine of cart; let idx = index">
+      <td>{{ idx + 1 }}</td>
+      <td>{{ cartLine.name }}</td>
+      <td>{{ cartLine.price }}</td>
+      <td>qty</td>
+      <td>total</td>
+    </tr>
+  </tbody>
+</table>
