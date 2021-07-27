@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core'
 import { CartService } from '../cart.service'
+import { ItemsService } from '../items.service'
 
 @Component({
   selector: 'app-item',
@@ -12,16 +13,19 @@ export class ItemComponent {
 
   currentTab = 1 //  state
 
-  reviews: Array<any> = [
-    { stars: 5, body: 'sample-review-1', author: 'who1' },
-    { stars: 1, body: 'sample-review-2', author: 'who2' },
-  ]
+  reviews: Array<any> = []
 
-  constructor(private cartService: CartService) {}
+  constructor(private cartService: CartService, private itemsService: ItemsService) { }
 
   handleTabChange(event: Event, tabIdx: number) {
     event.preventDefault()
     this.currentTab = tabIdx
+    if (this.currentTab === 3) {
+      this.itemsService.getReviews(this.item.id)
+        .subscribe((reviews: any) => {
+          this.reviews = reviews
+        })
+    }
   }
 
   isTabSelected(tabIdx: number): boolean {

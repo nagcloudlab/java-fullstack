@@ -10,10 +10,16 @@ export class ItemListComponent implements OnInit {
   items: Array<any> = []
 
   // cdi
-  constructor(private itemsService: ItemsService) {}
+  constructor(private itemsService: ItemsService) { }
 
   ngOnInit() {
-    this.items = this.itemsService.getItems()
-    console.log(this.items)
+
+    this.itemsService.getItems()
+      .subscribe({
+        next: (response:any) => {
+          this.items=response.items;
+        }
+      })
+
   }
 }

@@ -1,0 +1,28 @@
+{
+    "reviews": {
+        "1": [
+            {
+                "stars": 4,
+                "body": "best laptop to buy",
+                "author": "Nag"
+            },
+            {
+                "stars": 4,
+                "body": "bad laptop, becoz costly",
+                "author": "Indu"
+            }
+        ],
+        "2": [
+            {
+                "stars": 4,
+                "body": "best mobile to buy",
+                "author": "Nag"
+            },
+            {
+                "stars": 4,
+                "body": "good one",
+                "author": "Indu"
+            }
+        ]
+    }
+}
