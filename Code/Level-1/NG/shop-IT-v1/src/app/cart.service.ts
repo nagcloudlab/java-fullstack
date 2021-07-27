@@ -1,19 +1,20 @@
-import { Injectable } from '@angular/core';
+import { Injectable } from '@angular/core'
+
+import { Subject } from 'rxjs'
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class CartService {
-
   cart: Array<any> = []
 
-  constructor() { }
+  cartCountStream: Subject<number> = new Subject()
 
+  constructor() {}
 
   addToCart(item: any) {
     this.cart.push(item)
-    console.log(this.cart);
+    console.log('CartService :: propagating cart-countinto stream')
+    this.cartCountStream.next(this.cart.length)
   }
-
-
 }
