@@ -1,15 +1,19 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core'
+import { ItemsService } from '../items.service'
 
 @Component({
   selector: 'app-item-list',
   templateUrl: './item-list.component.html',
-  styleUrls: ['./item-list.component.css']
+  styleUrls: ['./item-list.component.css'],
 })
 export class ItemListComponent implements OnInit {
+  items: Array<any> = []
 
-  constructor() { }
+  // cdi
+  constructor(private itemsService: ItemsService) {}
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.items = this.itemsService.getItems()
+    console.log(this.items)
   }
-
 }

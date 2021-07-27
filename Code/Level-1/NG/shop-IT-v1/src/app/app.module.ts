@@ -12,12 +12,14 @@ import { HighlightDirective } from './highlight.directive'
 import { CartViewComponent } from './cart-view/cart-view.component'
 import { HomeComponent } from './home/home.component'
 import { ItemListComponent } from './item-list/item-list.component'
+import { NotFoundComponent } from './not-found/not-found.component'
 // import { ItemsService } from './items.service';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'items', component: ItemListComponent },
   { path: 'cart', component: CartViewComponent },
+  { path: '**', component: NotFoundComponent },
 ]
 
 @NgModule({
@@ -27,11 +29,14 @@ const routes: Routes = [
     ItemComponent,
     ReviewComponent,
     CartBadge,
+    CartViewComponent,
+    HomeComponent,
+    ItemListComponent,
     PriceDiscountPipe,
     HighlightDirective,
-    CartViewComponent,
+    NotFoundComponent,
   ],
-  imports: [BrowserModule, RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes), BrowserModule],
   // providers: [ItemsService],
   bootstrap: [AppComponent],
 })
