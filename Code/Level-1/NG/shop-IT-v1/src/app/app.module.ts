@@ -13,7 +13,8 @@ import { HighlightDirective } from './highlight.directive'
 import { CartViewComponent } from './cart-view/cart-view.component'
 import { HomeComponent } from './home/home.component'
 import { ItemListComponent } from './item-list/item-list.component'
-import { NotFoundComponent } from './not-found/not-found.component'
+import { NotFoundComponent } from './not-found/not-found.component';
+import { ReviewFormComponent } from './review-form/review-form.component'
 // import { ItemsService } from './items.service';
 
 const routes: Routes = [
@@ -36,6 +37,7 @@ const routes: Routes = [
     PriceDiscountPipe,
     HighlightDirective,
     NotFoundComponent,
+    ReviewFormComponent,
   ],
   imports: [BrowserModule,HttpClientModule,RouterModule.forRoot(routes)],
   // providers: [ItemsService],

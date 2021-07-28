@@ -1,0 +1,35 @@
+
+
+<button><i class="fa fa-plus"></i></button>
+
+
+<div class="row">
+    <div class="col-8">
+        <div class="card">
+            <div class="card-header">ReviewForm</div>
+            <div class="card-body">
+                <form>
+                    <div class="form-group">
+                        <label>Author</label>
+                        <input class="form-control"/>
+                    </div>
+                    <div class="form-group">
+                        <label>Stars</label>
+                        <select class="form-control">
+                            <option *ngFor="let n of [1,2,3,4,5]">{{n}}</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Body</label>
+                        <textarea class="form-control"></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="card-footer">
+                <button class="btn btn-danger btn-sm">cancel</button>
+                &nbsp;
+                <button class="btn btn-dark btn-sm">submit</button>
+            </div>
+        </div>
+    </div>
+</div>
