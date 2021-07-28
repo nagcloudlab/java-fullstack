@@ -59,7 +59,7 @@
         <app-review [value]="review"></app-review>
       </div>
       <br/>
-      <app-review-form></app-review-form>
+      <app-review-form (new-review)="handleNewReview($event)"></app-review-form>
     </div>
   </div>
 </div>

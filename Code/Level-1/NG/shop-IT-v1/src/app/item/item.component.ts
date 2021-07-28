@@ -35,4 +35,11 @@ export class ItemComponent {
   handleBuy(event: any) {
     this.cartService.addToCart(this.item)
   }
+
+
+  handleNewReview(review: any) {
+    this.itemsService.addNewReview(this.item.id,review)
+    this.reviews.unshift(review);
+  }
+
 }

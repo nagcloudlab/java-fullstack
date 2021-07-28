@@ -1,7 +1,7 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 
-import {map} from 'rxjs/operators'
+import { map } from 'rxjs/operators'
 
 @Injectable({
     providedIn: 'root'
@@ -20,7 +20,11 @@ export class ItemsService {
     getReviews(itemId: number) {
         const url = "/assets/data/reviews.json";
         return this.httpClient.get(url)
-            .pipe(map((response:any)=>response.reviews[itemId]))
+            .pipe(map((response: any) => response.reviews[itemId]))
+    }
+
+    addNewReview(itemId: number, review: any) {
+        //TODO
     }
 
 
