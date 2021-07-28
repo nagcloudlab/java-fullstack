@@ -59,7 +59,8 @@
         <app-review [value]="review"></app-review>
       </div>
       <br/>
-      <app-review-form (new-review)="handleNewReview($event)"></app-review-form>
+      <!-- <app-review-form (new-review)="handleNewReview($event)"></app-review-form> -->
+      <app-review-reactive-form (new-review)="handleNewReview($event)"></app-review-reactive-form>
     </div>
   </div>
 </div>

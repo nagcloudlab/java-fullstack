@@ -1,0 +1,75 @@
+<button *ngIf="!isFormOpen" (click)="toggleIsFormOpen()">
+    <i class="fa fa-plus"></i>
+</button>
+
+<div class="row" *ngIf="isFormOpen">
+
+    <pre>
+        <hr/>
+        Review Form Group
+        <hr/>
+        is valid      : {{reviewFormGroup.valid}}
+        is invalid    : {{reviewFormGroup.invalid}}
+
+        is pristine   : {{reviewFormGroup.pristine}}
+        is dirty      : {{reviewFormGroup.dirty}}
+
+
+        is touched    : {{reviewFormGroup.touched}}
+        is untouched  : {{reviewFormGroup.untouched}}
+
+    </pre>
+
+    <pre>
+        <hr/>
+        Author Form Control
+        <hr/>
+        is valid     : {{reviewFormGroup.controls.author.valid}}
+        is invalid   : {{reviewFormGroup.controls.author.invalid}}
+
+        is pristine  : {{reviewFormGroup.controls.author.pristine}}
+        is dirty     : {{reviewFormGroup.controls.author.dirty}}
+
+        is touched   : {{reviewFormGroup.controls.author.touched}}
+        is untouched : {{reviewFormGroup.controls.author.untouched}}
+
+    </pre>
+
+    
+    <div class="col-8">
+        <form [formGroup]="reviewFormGroup" (submit)="handleSubmit($event)">
+            <div class="card">
+                <div class="card-header">ReviewForm</div>
+                <div class="card-body">
+                    <div class="form-group">
+                        <label>Author</label>
+                        <input formControlName="author"  class="form-control" />
+                        <div *ngIf="reviewFormGroup.controls.author.invalid && reviewFormGroup.controls.author.touched" class="text-danger">
+                            <div *ngIf="reviewFormGroup.controls.author.errors?.required">
+                                Author Name is Required
+                            </div>
+                            <div *ngIf="reviewFormGroup.controls.author.errors?.minlength">
+                                Author Name Must have 3 char
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Stars</label>
+                        <select formControlName="stars" class="form-control" >
+                            <option *ngFor="let n of [1,2,3,4,5]" [value]="n">{{n}}</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Body</label>
+                        <textarea formControlName="body"  class="form-control"></textarea>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <button (click)="toggleIsFormOpen()" class="btn btn-danger btn-sm">cancel</button>
+                    &nbsp;
+                    <button class="btn btn-dark btn-sm">submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

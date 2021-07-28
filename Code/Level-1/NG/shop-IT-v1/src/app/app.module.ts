@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core'
 import { BrowserModule } from '@angular/platform-browser'
 import { RouterModule, Routes } from '@angular/router'
 import { HttpClientModule } from '@angular/common/http'
-import { FormsModule } from '@angular/forms';
+import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component'
 import { Navbar } from './navbar/navbar.component'
@@ -15,7 +15,8 @@ import { CartViewComponent } from './cart-view/cart-view.component'
 import { HomeComponent } from './home/home.component'
 import { ItemListComponent } from './item-list/item-list.component'
 import { NotFoundComponent } from './not-found/not-found.component';
-import { ReviewFormComponent } from './review-form/review-form.component'
+import { ReviewFormComponent } from './review-form/review-form.component';
+import { ReviewReactiveFormComponent } from './review-reactive-form/review-reactive-form.component'
 // import { ItemsService } from './items.service';
 
 const routes: Routes = [
@@ -39,11 +40,13 @@ const routes: Routes = [
     HighlightDirective,
     NotFoundComponent,
     ReviewFormComponent,
+    ReviewReactiveFormComponent,
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     FormsModule,
+    ReactiveFormsModule,
     RouterModule.forRoot(routes),
   ],
   // providers: [ItemsService],
