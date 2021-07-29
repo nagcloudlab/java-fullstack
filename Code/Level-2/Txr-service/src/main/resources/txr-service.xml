@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--suppress SpringFacetInspection -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:jee="http://www.springframework.org/schema/jee"
+       xsi:schemaLocation="http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-4.2.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="jdbcAccountRepository" class="com.example.repository.JdbcAccountRepository"/>
+    <bean id="jpaAccountRepository" class="com.example.repository.JpaAccountRepository"/>
+    <bean id="txrService" class="com.example.service.NEFTTxrService">
+        <constructor-arg ref="jdbcAccountRepository"/>
+    </bean>
+
+
+</beans>

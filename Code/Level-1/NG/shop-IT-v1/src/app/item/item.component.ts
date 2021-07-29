@@ -15,7 +15,21 @@ export class ItemComponent {
 
   reviews: Array<any> = []
 
-  constructor(private cartService: CartService, private itemsService: ItemsService) { }
+  constructor(private cartService: CartService, private itemsService: ItemsService) { 
+    console.log("constructor");
+  }
+
+  ngOnChanges(){
+    console.log("ngOnChanges"); // called when input are changed
+  }
+
+  ngOnInit(){
+    console.log("ngOnInit"); // one-time , 
+  }
+
+  ngOnDestroy(){
+    console.log("ngOnDestroy"); // one-time , // clean-up
+  }
 
   handleTabChange(event: Event, tabIdx: number) {
     event.preventDefault()
