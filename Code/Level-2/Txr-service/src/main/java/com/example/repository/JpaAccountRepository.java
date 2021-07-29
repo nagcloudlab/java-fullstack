@@ -2,7 +2,11 @@ package com.example.repository;
 
 import com.example.model.Account;
 import org.apache.log4j.Logger;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Component;
 
+@Component
+@Qualifier("jpa")
 public class JpaAccountRepository implements AccountRepository {
 
     private final static Logger logger=Logger.getLogger("txr-service");
@@ -13,13 +17,13 @@ public class JpaAccountRepository implements AccountRepository {
 
     @Override
     public Account load(String number) {
-        logger.info("loading account "+number);
+        logger.info("JPA : loading account "+number);
         return new Account(number,2000.00);
     }
 
     @Override
     public Account update(Account account) {
-        logger.info("loading account "+account.getNumber());
+        logger.info("JPA : loading account "+account.getNumber());
         return account;
     }
 }

@@ -4,16 +4,21 @@ import com.example.model.Account;
 import com.example.repository.AccountRepository;
 import com.example.repository.JdbcAccountRepository;
 import org.apache.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Component;
 
+@Component("txrService")
 public class NEFTTxrService implements TxrService {
 
     private final static Logger logger = Logger.getLogger("txr-service");
 
     private AccountRepository accountRepository;
 
-    public NEFTTxrService(AccountRepository accountRepository) {
+    @Autowired
+    public NEFTTxrService( @Qualifier("jdbc") AccountRepository accountRepository) {
         this.accountRepository=accountRepository;
-        logger.info("NEFTTxrService component created");
+        logger.info("NEFTTxrService component instantiated");
     }
 
     @Override

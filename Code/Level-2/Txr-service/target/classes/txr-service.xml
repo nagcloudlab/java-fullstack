@@ -1,17 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--suppress SpringFacetInspection -->
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:jee="http://www.springframework.org/schema/jee"
+       xmlns:p="http://www.springframework.org/schema/p" xmlns:c="http://www.springframework.org/schema/c"
+       xmlns:util="http://www.springframework.org/schema/util" xmlns:context="http://www.springframework.org/schema/context"
        xsi:schemaLocation="http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-4.2.xsd
-		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.2.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.2.xsd">
+
+    <context:annotation-config/>
+    <context:component-scan base-package="com.example"></context:component-scan>
 
 
-
-    <bean id="jdbcAccountRepository" class="com.example.repository.JdbcAccountRepository"/>
-    <bean id="jpaAccountRepository" class="com.example.repository.JpaAccountRepository"/>
-    <bean id="txrService" class="com.example.service.NEFTTxrService">
-        <constructor-arg ref="jdbcAccountRepository"/>
+    <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
+        <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+        <property name="url" value="jdbc:mysql://localhost:3306/accounts_db"/>
+        <property name="username" value="root"/>
+        <property name="password" value="root1234"/>
+        <property name="maxActive" value="3"/>
     </bean>
+
+<!--    <bean id="jdbcAccountRepository" class="com.example.repository.JdbcAccountRepository">-->
+<!--        <constructor-arg ref="dataSource"/>-->
+<!--    </bean>-->
+<!--    <bean id="jpaAccountRepository" class="com.example.repository.JpaAccountRepository"/>-->
+<!--    <bean id="txrService" class="com.example.service.NEFTTxrService">-->
+<!--        <constructor-arg ref="jdbcAccountRepository"/>-->
+<!--    </bean>-->
+
+
+
 
 
 </beans>

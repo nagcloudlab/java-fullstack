@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="Txr-service-v1" />
+        <module name="Txr-service" />
       </profile>
     </annotationProcessing>
   </component>
