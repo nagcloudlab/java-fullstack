@@ -13,10 +13,8 @@ import javax.sql.DataSource;
 
 @Configuration
 @Import(value = {DatasouceConfiguration.class})
-//@ComponentScan(basePackages = {"com.example.repository","com.example.service"})
 public class TxrServiceConfiguration {
 
-    // Nag
 
     @Autowired
     private DataSource dataSource;
