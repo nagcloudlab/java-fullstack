@@ -1,5 +1,6 @@
 package com.example;
 
+import com.example.config.TxrServiceConfiguration;
 import com.example.repository.AccountRepository;
 import com.example.repository.JdbcAccountRepository;
 import com.example.repository.JpaAccountRepository;
@@ -7,6 +8,7 @@ import com.example.service.NEFTTxrService;
 import com.example.service.TxrService;
 import org.apache.log4j.Logger;
 import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class App {
@@ -18,13 +20,14 @@ public class App {
         //------------------------------------
         // init / booting
         //------------------------------------
+
 //        AccountRepository jdbcAccountRepository=new JdbcAccountRepository();
 //        AccountRepository jpaAccountRepository=new JpaAccountRepository();
 //        TxrService txrService=new NEFTTxrService(jpaAccountRepository);
 
-        // create spring container a.k.a application-context
+        // create spring-container a.k.a BeanFactory -> application-context
         ConfigurableApplicationContext applicationContext=null;
-        applicationContext=new ClassPathXmlApplicationContext("txr-service.xml");
+        applicationContext=new AnnotationConfigApplicationContext(TxrServiceConfiguration.class);
 
 
         System.out.println("-".repeat(50));
