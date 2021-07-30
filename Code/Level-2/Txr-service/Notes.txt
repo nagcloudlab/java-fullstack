@@ -1,0 +1,18 @@
+
+
+
+ApplicationContext
+
+    Datasource   ===> pool of connections
+    JdbcAccountRepository ==> data accessing logic
+    NEFTTxrService        ==> transfer logic b/w 2 accounts
+
+
+
+
+
+
+
+
+
+

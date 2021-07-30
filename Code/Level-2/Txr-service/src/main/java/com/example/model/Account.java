@@ -1,7 +1,14 @@
 package com.example.model;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="ACCOUNTS")
 public class Account {
-    
+
+    @Id
     private String number;
     private double balance;
 

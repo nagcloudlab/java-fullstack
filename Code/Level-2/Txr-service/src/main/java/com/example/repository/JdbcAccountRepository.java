@@ -6,45 +6,38 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.context.annotation.Scope;
+import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Repository;
 
 import javax.sql.DataSource;
-import java.sql.Connection;
-import java.sql.SQLException;
+import java.sql.*;
 
-//@Component("jdbcAccountRepository")
-@Repository("jdbcAccountRepository")
-@Qualifier("jdbc")
-@Scope("singleton")
-@Lazy(false)
+
 public class JdbcAccountRepository implements AccountRepository {
 
     private final static Logger logger=Logger.getLogger("txr-service");
 
-    private DataSource dataSource;
+    private JdbcTemplate jdbcTemplate;
 
-    @Autowired
-    public JdbcAccountRepository(DataSource dataSource) {
-        this.dataSource=dataSource;
+    public JdbcAccountRepository(JdbcTemplate jdbcTemplate) {
+        this.jdbcTemplate=jdbcTemplate;
         logger.info("JdbcAccountRepository component instantiated..");
     }
 
     @Override
     public Account load(String number) {
-        logger.info("JDBC : loading account "+number);
-//        try {
-//            Connection connection=dataSource.getConnection();
-//        } catch (SQLException e) {
-//            e.printStackTrace();
-//        }
-        return new Account(number,1000.00);
+        logger.info("JDBC : loading account " + number);
+        String sql = "select * from ACCOUNTS where number=?";
+        return jdbcTemplate.queryForObject(sql,(rs,i)->{
+            return  new Account(rs.getString(1),rs.getDouble(2));
+        },number);
     }
 
     @Override
     public Account update(Account account) {
         logger.info("JDBC : updating account "+account.getNumber());
-        //..
+        String sql="update ACCOUNTS set balance=? where number=?";
+        jdbcTemplate.update(sql,account.getBalance(),account.getNumber());
         return account;
     }
 }
