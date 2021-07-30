@@ -16,7 +16,7 @@ public class NEFTTxrService implements TxrService {
     private AccountRepository accountRepository;
 
     @Autowired
-    public NEFTTxrService( @Qualifier("jdbc") AccountRepository accountRepository) {
+    public NEFTTxrService( /*@Qualifier("jdbc")*/ AccountRepository accountRepository) {
         this.accountRepository=accountRepository;
         logger.info("NEFTTxrService component instantiated");
     }

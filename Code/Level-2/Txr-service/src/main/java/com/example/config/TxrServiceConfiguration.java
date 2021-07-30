@@ -1,5 +1,9 @@
 package com.example.config;
 
+import com.example.repository.AccountRepository;
+import com.example.repository.JdbcAccountRepository;
+import com.example.service.NEFTTxrService;
+import com.example.service.TxrService;
 import org.apache.commons.dbcp.BasicDataSource;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -22,5 +26,15 @@ public class TxrServiceConfiguration {
         dataSource.setMaxActive(3);
         return  dataSource;
     }
+
+//    @Bean
+//    public AccountRepository accountRepository(){
+//        return  new JdbcAccountRepository(dataSource());
+//    }
+//
+//    @Bean
+//    public TxrService txrService(){
+//        return  new NEFTTxrService(accountRepository());
+//    }
 
 }

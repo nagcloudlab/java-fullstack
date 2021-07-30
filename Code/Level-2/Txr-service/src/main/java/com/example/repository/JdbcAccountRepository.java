@@ -9,9 +9,9 @@ import org.springframework.stereotype.Component;
 import javax.sql.DataSource;
 import java.sql.Connection;
 import java.sql.SQLException;
-
+//
 @Component
-@Qualifier("jdbc")
+//@Qualifier("jdbc")
 public class JdbcAccountRepository implements AccountRepository {
 
     private final static Logger logger=Logger.getLogger("txr-service");
