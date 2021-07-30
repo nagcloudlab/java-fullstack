@@ -7,7 +7,7 @@ import org.springframework.context.annotation.*;
 import javax.sql.DataSource;
 
 @Configuration
-@PropertySource("classpath:txr-service-${ENV}.properties")
+@PropertySource("classpath:txr-service-dev.properties")
 public class DatasouceConfiguration {
 
 
@@ -20,7 +20,10 @@ public class DatasouceConfiguration {
     @Value("${db.password}")
     private String dbPassword;
 
-    @Profile("dev")
+//    @Value("#{systemProperties['port']}")  // -Dport=8181
+//    private int port;
+
+    //@Profile("dev")
     @Bean
     @Description("Data-source for the underlying RDB we are using")
     public DataSource dataSourceForDev(){
@@ -34,14 +37,5 @@ public class DatasouceConfiguration {
         return  dataSource;
     }
 
-    @Profile("prod")
-    @Bean
-    @Description("Data-source for the underlying RDB we are using")
-    public DataSource dataSourceForProd(){
-        System.out.println("datasource()");
-        BasicDataSource dataSource=new BasicDataSource();
-
-        return  dataSource;
-    }
 
 }

@@ -12,23 +12,24 @@ import org.springframework.context.annotation.*;
 import javax.sql.DataSource;
 
 @Configuration
+@ComponentScan(basePackages = {"com.example.repository","com.example.service"})
 @Import(value = {DatasouceConfiguration.class})
 public class TxrServiceConfiguration {
 
-
-    @Autowired
-    private DataSource dataSource;
-
-    @Bean
-    public AccountRepository accountRepository(){
-        return  new JdbcAccountRepository(dataSource);
-    }
-
-    @Bean
-//    @Scope("prototype")
-    public TxrService txrService(){
-        System.out.println("txrService()");
-        return  new NEFTTxrService(accountRepository());
-    }
+//
+//    @Autowired
+//    private DataSource dataSource;
+//
+//    @Bean
+//    public AccountRepository accountRepository(){
+//        return  new JdbcAccountRepository(dataSource);
+//    }
+//
+//    @Bean
+////    @Scope("singleton")
+//    public TxrService txrService(){
+//        System.out.println("txrService()");
+//        return  new NEFTTxrService(accountRepository());
+//    }
 
 }
