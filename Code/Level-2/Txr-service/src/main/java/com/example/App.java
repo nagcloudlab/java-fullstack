@@ -25,12 +25,18 @@ public class App {
         // use
         //------------------------------------
 
-        TxrService txrService=applicationContext.getBean("txrService",TxrService.class);
+        TxrService txrService1=applicationContext.getBean(TxrService.class);
+//
+//
+        TxrService txrService2=applicationContext.getBean(TxrService.class);
+//
+        System.out.println(txrService1==txrService2);
 
-        txrService.txr(1000.00,"1","2");
-        System.out.println();
-        txrService.txr(1000.00,"2","1");
-        System.out.println("-".repeat(50));
+
+//        txrService.txr(1000.00,"1","2");
+//        System.out.println();
+//        txrService.txr(1000.00,"2","1");
+//        System.out.println("-".repeat(50));
 
         //------------------------------------
         // destroy

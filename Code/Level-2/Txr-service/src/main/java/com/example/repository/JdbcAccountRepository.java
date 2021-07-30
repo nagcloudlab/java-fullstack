@@ -10,7 +10,7 @@ import javax.sql.DataSource;
 import java.sql.Connection;
 import java.sql.SQLException;
 //
-@Component
+//@Component
 //@Qualifier("jdbc")
 public class JdbcAccountRepository implements AccountRepository {
 
@@ -18,7 +18,7 @@ public class JdbcAccountRepository implements AccountRepository {
 
     private DataSource dataSource;
 
-    @Autowired
+//    @Autowired
     public JdbcAccountRepository(DataSource dataSource) {
         this.dataSource=dataSource;
         logger.info("JdbcAccountRepository component instantiated..");
