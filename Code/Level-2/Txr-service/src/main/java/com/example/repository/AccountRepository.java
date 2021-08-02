@@ -1,6 +1,6 @@
 package com.example.repository;
 
-import com.example.model.Account;
+import com.example.entity.Account;
 
 public interface AccountRepository {
 
