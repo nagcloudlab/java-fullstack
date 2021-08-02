@@ -12,7 +12,7 @@ import org.springframework.transaction.annotation.Transactional;
 @Service("txrService")
 public class TxrServiceImpl implements  TxrService{
 
-    private final static Logger logger = Logger.getLogger("txr-service");
+//    private final static Logger logger = Logger.getLogger("txr-service");
 
 
     private AccountRepository accountRepository;
@@ -20,17 +20,19 @@ public class TxrServiceImpl implements  TxrService{
     @Autowired
     public TxrServiceImpl(AccountRepository accountRepository) {
         this.accountRepository = accountRepository;
-        logger.info("TxrService component instantiated");
+//        logger.info("TxrService component instantiated");
     }
 
+    // AOP
     @Transactional(
             transactionManager = "transactionManager",
             rollbackFor = RuntimeException.class,
             timeout = 30
     )
     @Override
+    // Join Point
     public boolean txr(double amount, String fromAccNum, String toAccNum) {
-        logger.info("txr initiated");
+//        logger.info("txr initiated");
 
         Account fromAccount = accountRepository.load(fromAccNum);
         Account toAccount = accountRepository.load(toAccNum);
@@ -39,11 +41,11 @@ public class TxrServiceImpl implements  TxrService{
         accountRepository.update(fromAccount);
 
 //        if(true){
-//            throw new IllegalStateException("oops");
+//            throw new IllegalStateException("account update failed");
 //        }
 
         accountRepository.update(toAccount);
-        logger.info("txr completed");
+//        logger.info("txr completed");
 
         return true;
     }

@@ -13,6 +13,7 @@ import javax.persistence.PersistenceContext;
 @Configuration
 @Import(value={JpaConfiguration.class})
 @ComponentScan(basePackages = {"com.example"})
+@EnableAspectJAutoProxy
 public class TxrServiceConfiguration {
 
 
