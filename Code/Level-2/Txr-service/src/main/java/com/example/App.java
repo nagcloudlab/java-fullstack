@@ -5,6 +5,8 @@ import com.example.service.TxrService;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
+import java.util.Scanner;
+
 public class App {
 
     public static void main(String[] args) {
@@ -20,8 +22,21 @@ public class App {
         // use
         //------------------------------------------------------------
 
+        Scanner scanner=new Scanner(System.in);
+
+
+        System.out.println("Enter From Account Number?");
+        String fromAccNum= scanner.nextLine();
+
+        System.out.println("Enter To Account Number?");
+        String toAccNum= scanner.nextLine();
+
+        System.out.println("Enter Amount?");
+        double amount= scanner.nextDouble();
+
+
         TxrService txrService= applicationContext.getBean("txrService", TxrService.class);
-        txrService.txr(100,"1","2");
+        txrService.txr(amount,fromAccNum,toAccNum);
 
 
         //------------------------------------------------------------

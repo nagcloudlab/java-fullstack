@@ -11,7 +11,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
 @Configuration
-@Import(value={JpaConfiguration.class})
+@Import(value={JpaConfiguration.class,WebMvcConfiguration.class})
 @ComponentScan(basePackages = {"com.example"})
 @EnableAspectJAutoProxy
 public class TxrServiceConfiguration {

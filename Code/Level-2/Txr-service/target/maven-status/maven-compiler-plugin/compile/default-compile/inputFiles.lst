@@ -1,0 +1,11 @@
+/Users/nag/tng/java-fullstack/Code/Level-2/TXR-service/src/main/java/com/example/entity/Account.java
+/Users/nag/tng/java-fullstack/Code/Level-2/TXR-service/src/main/java/com/example/App.java
+/Users/nag/tng/java-fullstack/Code/Level-2/TXR-service/src/main/java/com/example/repository/AccountRepository.java
+/Users/nag/tng/java-fullstack/Code/Level-2/TXR-service/src/main/java/com/example/service/TxrService.java
+/Users/nag/tng/java-fullstack/Code/Level-2/TXR-service/src/main/java/com/example/configuration/TxrServiceConfiguration.java
+/Users/nag/tng/java-fullstack/Code/Level-2/TXR-service/src/main/java/com/example/service/TxrServiceImpl.java
+/Users/nag/tng/java-fullstack/Code/Level-2/TXR-service/src/main/java/com/patterns/Proxy.java
+/Users/nag/tng/java-fullstack/Code/Level-2/TXR-service/src/main/java/com/example/repository/JpaAccountRepository.java
+/Users/nag/tng/java-fullstack/Code/Level-2/TXR-service/src/main/java/com/example/configuration/DataSourceConfiguration.java
+/Users/nag/tng/java-fullstack/Code/Level-2/TXR-service/src/main/java/com/example/configuration/JpaConfiguration.java
+/Users/nag/tng/java-fullstack/Code/Level-2/TXR-service/src/main/java/com/example/aspects/LoggingAspect.java
