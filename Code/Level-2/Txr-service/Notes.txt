@@ -2,10 +2,23 @@
 
 
 
-
- Web/servlet-container e.g Tomcat,Jetty
-
-    - HttpServlet
+Challenges while using spring projects
+-------------------------------------
 
 
+-> finding right Maven dependency
+
+-> writing default | expertise configuration is manual  ( XML or Javabased )
+
+-> externalizing configuration properties
+
+
+
+
+solution:
+
+
+    - Spring boot
+
+        -> auto configuration
 
