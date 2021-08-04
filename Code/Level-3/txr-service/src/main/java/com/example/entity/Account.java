@@ -1,5 +1,6 @@
 package com.example.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -18,7 +19,9 @@ public class Account {
     private String number;
     @Column(name="BALANCE")
     private double balance;
-//    @OneToMany(mappedBy = "account")
-//    private List<Txn> txns;
+
+    @JsonIgnore
+    @OneToMany(mappedBy = "account")
+    private List<Txn> txns;
 
 }

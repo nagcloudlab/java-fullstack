@@ -1,6 +1,7 @@
 package com.example.entity;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -16,15 +17,18 @@ import java.util.Date;
 public class Txn {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private TxnType type;
     private double amount;
     @Temporal(TemporalType.TIMESTAMP)
     private Date date;
-//    @ManyToOne
-//    @JoinColumn(name="acc_number")
-//    private Account account;
+
+
+
+    @ManyToOne
+    @JoinColumn(name="acc_number")
+    private Account account;
 
 
 }
