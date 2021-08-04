@@ -1,0 +1,25 @@
+
+
+-----------------------------------------------
+REST api design
+-----------------------------------------------
+
+resources
+
+    - account
+    - txn
+
+---------------------------
+REST API End-Points
+---------------------------
+
+POST   /api/txr
+
+GET    /api/accounts
+GET    /api/accounts/{number}
+
+
+GET    /api/accounts/{number}/txns?limit=n
+GET    /api/accounts/{number}/txns/{id}
+
+
