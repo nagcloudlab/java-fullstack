@@ -1,23 +1,21 @@
-package com.example.model.model;
+package com.example.model;
 
-import com.example.model.User;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
 
 
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
 @Entity
+@Table(name="todos")
 public class Todo {
 
     @Id
+    @GeneratedValue
     private int id;
     private String title;
     private boolean completed;

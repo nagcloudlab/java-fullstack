@@ -1,2 +1,5 @@
-package com.example.service;public enum TodoFilter {
+package com.example.service;
+
+public enum TodoFilter {
+    ALL,COMPLETED,ACTIVE
 }
