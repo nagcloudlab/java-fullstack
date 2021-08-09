@@ -1,0 +1,17 @@
+
+
+
+<div class="">
+
+    <button class="btn btn-lg btn-dark" (click)="getGreetingMessage('en')">English</button>
+    &nbsp;
+    <button class="btn btn-lg btn-dark" (click)="getGreetingMessage('tn')">Tamil</button>
+    &nbsp;
+    <button class="btn btn-lg btn-dark" (click)="getGreetingMessage('ar')">Arabic</button>
+
+    <hr/>
+
+
+    <app-greeting-message [value]="message"></app-greeting-message>
+
+</div>
