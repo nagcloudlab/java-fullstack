@@ -6,6 +6,8 @@ import com.example.repository.AccountRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Isolation;
+import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
 @Service("txrService")
@@ -18,7 +20,17 @@ public class TxrServiceImpl implements  TxrService{
         this.accountRepository = accountRepository;
     }
 
-    @Transactional
+
+    // ACID
+
+    @Transactional(
+            transactionManager = "transactionManager",
+            rollbackFor = {RuntimeException.class},
+            noRollbackFor = {},
+            timeout = 30,
+            isolation = Isolation.READ_COMMITTED,
+            propagation = Propagation.REQUIRED
+    )
     @Override
     public boolean txr(double amount, String fromAccNum, String toAccNum) {
         Account fromAccount = accountRepository.load(fromAccNum);
