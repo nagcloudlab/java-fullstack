@@ -1,0 +1,14 @@
+
+
+
+server:
+  port: 8080
+  
+  
+spring:
+  data:
+    mongodb:
+      uri: mongodb://mongohost:27017/productsdb
+       
+       
+ 

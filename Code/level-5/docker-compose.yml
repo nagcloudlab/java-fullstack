@@ -1,0 +1,25 @@
+version: "3.8"
+services:
+  mongodb:
+    image : mongo
+    container_name: mongohost
+    environment:
+      - PUID=1000
+      - PGID=1000
+    volumes:
+      - /Users/nag/data/db:/data/db
+    ports:
+      - 27017:27017
+    restart: unless-stopped
+
+  product:
+    image: nagabhushanamn/product-service
+    container_name: product
+    ports:
+      - 8080:8080
+
+  shop:
+    image: nagabhushanamn/shop-web-ui-service
+    container_name: shop
+    ports:
+      - 80:80 

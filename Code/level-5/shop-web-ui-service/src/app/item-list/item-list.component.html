@@ -1,0 +1,24 @@
+
+
+<div>
+   
+    <hr/>
+    Type : {{itemsType}}
+    <hr/>
+
+    <div *ngFor="let item of items">
+       <div class="list-group-item">
+           <div>{{item.name}}</div>
+           <div>{{item.price|currency:'INR'}}</div>
+           <button class="btn btn-sm btn-primary" [disabled]="!item.available">
+               buy
+            </button>
+            <div class="mt-3" *ngFor="let review of item.reviews">
+                <span>{{review.stars}}</span> &mdash; <span>{{review.author}}</span>
+                <br/>
+                <div>{{review.body}}</div>
+            </div>
+       </div>
+    </div>
+
+</div>
