@@ -13,7 +13,7 @@ import org.springframework.stereotype.Service;
 import com.example.repository.UserRepository;
 
 @Service
-public class JpaUserDetailsService implements UserDetailsService {
+public class AppUserDetailsService implements UserDetailsService {
 
 	@Autowired
 	UserRepository userRepository;

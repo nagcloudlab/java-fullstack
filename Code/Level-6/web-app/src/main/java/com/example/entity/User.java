@@ -19,8 +19,9 @@ public class User {
 	private String password;
 	private String name;
 	@OneToMany(fetch = FetchType.EAGER)
-	@JoinTable(name = "user_authorities", joinColumns = { @JoinColumn(name = "user_id") }, inverseJoinColumns = {
-			@JoinColumn(name = "authority_id") })
+	@JoinTable(name = "user_authorities", 
+	          joinColumns = { @JoinColumn(name = "user_id") }, 
+	          inverseJoinColumns = { @JoinColumn(name = "authority_id") })
 	private Set<Authority> authorities;
 
 	public String getEmail() {
