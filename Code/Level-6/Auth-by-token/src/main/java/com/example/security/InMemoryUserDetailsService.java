@@ -13,7 +13,7 @@ public class InMemoryUserDetailsService implements UserDetailsService {
 
 	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-		return new User("Nag","12345",new ArrayList<>());
+		return new User("Nag@example.com","12345",new ArrayList<>());
 	}
 	
 }
