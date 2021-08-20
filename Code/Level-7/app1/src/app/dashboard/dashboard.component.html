@@ -1,0 +1,11 @@
+<button (click)="loadTodos()" class="btn btn-primary">Load Todos</button>
+
+<hr />
+
+
+<div *ngFor="let todo of todos">
+    {{todo.name}}
+</div>
+
+
+<hr />

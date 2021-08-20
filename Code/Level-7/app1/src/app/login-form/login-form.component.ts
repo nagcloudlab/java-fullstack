@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { UserService } from '../user.service';
 
 @Component({
@@ -10,8 +11,10 @@ import { UserService } from '../user.service';
 export class LoginFormComponent implements OnInit {
 
 
+  loginErrorMessage: string | null = ""
+
   loginForm: FormGroup = this.fb.group({
-    email: ['', [Validators.required, Validators.email]],
+    email: ['Nag@example.com', [Validators.required, Validators.email]],
     password: ['', [Validators.required]]
   })
 
@@ -21,10 +24,23 @@ export class LoginFormComponent implements OnInit {
     if (this.loginForm.valid) {
       const credentials = this.loginForm.value;
       this.userService.doAuth(credentials)
+        .subscribe({
+          next: (response: any) => {
+            this.loginErrorMessage=null;
+            localStorage.setItem("Auth-Token", response.jwt)
+            this.router.navigate(['dashboard'])
+          },
+          error: (err: any) => {
+            this.loginErrorMessage=err.error.messsage
+          }
+        })
     }
   }
 
-  constructor(private fb: FormBuilder,private userService:UserService) { }
+  constructor(
+    private fb: FormBuilder, 
+    private userService: UserService,
+    private router:Router) { }
 
   ngOnInit(): void {
   }
